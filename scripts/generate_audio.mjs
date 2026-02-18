@@ -2,6 +2,8 @@
 /**
  * Generate MP3 audio files for each character's ttsText using Qwen3-TTS-Flash.
  *
+ * Supports parallel processing with configurable concurrency.
+ *
  * Uses the MultiModalConversation API:
  *   POST https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation
  *
@@ -9,6 +11,7 @@
  *
  * Usage:
  *   DASHSCOPE_API_KEY=sk-xxx node scripts/generate_audio.mjs
+ *   DASHSCOPE_API_KEY=sk-xxx CONCURRENCY=10 node scripts/generate_audio.mjs
  */
 import { readFileSync, writeFileSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
@@ -18,6 +21,8 @@ import { createHash } from 'crypto';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const questionsPath = join(__dirname, '..', 'src', 'data', 'questions.json');
 const audioDir = join(__dirname, '..', 'public', 'audio');
+
+const CONCURRENCY = parseInt(process.env.CONCURRENCY || '5', 10);
 
 const apiKey = process.env.DASHSCOPE_API_KEY;
 if (!apiKey) {
@@ -67,12 +72,6 @@ const synthesize = async (text) => {
         throw new Error(`API error ${result.code}: ${result.message}`);
     }
 
-    // Debug: log full response on first call
-    if (!synthesize._debugDone) {
-        console.log(`  [DEBUG] Full response: ${JSON.stringify(result).slice(0, 1000)}`);
-        synthesize._debugDone = true;
-    }
-
     // Extract audio from response — could be a URL string or an object
     const audio = result.output?.audio;
     let audioUrl;
@@ -92,6 +91,34 @@ const synthesize = async (text) => {
 
     const arrayBuffer = await audioResponse.arrayBuffer();
     return Buffer.from(arrayBuffer);
+};
+
+// Run tasks with concurrency pool + periodic save
+const SAVE_INTERVAL = 20; // Save progress every N completions
+
+const runPool = async (tasks, concurrency, onCheckpoint) => {
+    const results = new Array(tasks.length);
+    let nextIndex = 0;
+    let completed = 0;
+    let lastSave = 0;
+
+    const worker = async () => {
+        while (nextIndex < tasks.length) {
+            const i = nextIndex++;
+            results[i] = await tasks[i]();
+            completed++;
+
+            // Periodic save
+            if (onCheckpoint && completed - lastSave >= SAVE_INTERVAL) {
+                lastSave = completed;
+                onCheckpoint(completed);
+            }
+        }
+    };
+
+    const workers = Array.from({ length: Math.min(concurrency, tasks.length) }, () => worker());
+    await Promise.all(workers);
+    return results;
 };
 
 // Main
@@ -115,45 +142,73 @@ const main = async () => {
         }
     }
 
-    console.log(`Found ${ttsMap.size} unique ttsText entries across ${questions.length} questions.\n`);
-
-    let processed = 0;
+    // Separate into existing (skip) and new (process)
+    const toProcess = [];
     let skipped = 0;
-    let errors = 0;
 
     for (const [hash, entry] of ttsMap) {
         const filePath = join(audioDir, `${hash}.mp3`);
         const audioFile = `${hash}.mp3`;
 
-        const setAudioFile = () => {
+        if (existsSync(filePath)) {
+            // Already exists — just update refs
             for (const ref of entry.refs) {
                 questions[ref.qIndex].pronunciation[ref.char].audioFile = audioFile;
             }
-        };
-
-        // Skip if audio file already exists
-        if (existsSync(filePath)) {
-            setAudioFile();
             skipped++;
-            continue;
+        } else {
+            toProcess.push({ hash, entry, audioFile });
         }
+    }
+
+    console.log(`Total unique ttsText: ${ttsMap.size}`);
+    console.log(`Already existing: ${skipped}`);
+    console.log(`Need generation: ${toProcess.length}`);
+    console.log(`Concurrency: ${CONCURRENCY}\n`);
+
+    if (toProcess.length === 0) {
+        // Still save to update any audioFile references
+        writeFileSync(questionsPath, JSON.stringify(questions, null, 2) + '\n', 'utf8');
+        console.log('All audio files already exist. Updated references only.');
+        return;
+    }
+
+    // Build task functions
+    let processed = 0;
+    let errors = 0;
+
+    const tasks = toProcess.map(({ hash, entry, audioFile }) => async () => {
+        const filePath = join(audioDir, `${hash}.mp3`);
 
         try {
             const audioBuffer = await synthesize(entry.ttsText);
             writeFileSync(filePath, audioBuffer);
-            setAudioFile();
+
+            // Update all references
+            for (const ref of entry.refs) {
+                questions[ref.qIndex].pronunciation[ref.char].audioFile = audioFile;
+            }
+
             processed++;
-            console.log(`  [${processed + skipped}/${ttsMap.size}] "${entry.ttsText}" → ${audioFile} (${audioBuffer.length} bytes)`);
+            const total = toProcess.length;
+            console.log(`  [${processed + errors}/${total}] "${entry.ttsText}" → ${audioFile} (${audioBuffer.length} bytes)`);
+            return { status: 'ok' };
         } catch (err) {
-            console.error(`  [${processed + skipped + errors}/${ttsMap.size}] ERROR "${entry.ttsText}": ${err.message}`);
             errors++;
+            console.error(`  [${processed + errors}/${toProcess.length}] ERROR "${entry.ttsText}": ${err.message}`);
+            return { status: 'error', message: err.message };
         }
+    });
 
-        // Delay between calls to avoid rate limiting
-        await new Promise(r => setTimeout(r, 300));
-    }
+    // Execute with concurrency pool + periodic save
+    const saveProgress = (completed) => {
+        writeFileSync(questionsPath, JSON.stringify(questions, null, 2) + '\n', 'utf8');
+        console.log(`  💾 Progress saved (${completed}/${toProcess.length} completed)`);
+    };
 
-    // Save updated questions with audioFile references
+    await runPool(tasks, CONCURRENCY, saveProgress);
+
+    // Final save
     writeFileSync(questionsPath, JSON.stringify(questions, null, 2) + '\n', 'utf8');
 
     console.log(`\nDone!`);

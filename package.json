@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && cp public/mascot.png public/vite.svg dist/ 2>/dev/null; rsync -a dist/ docs/ --exclude audio && rm -rf dist",
     "lint": "eslint .",
     "preview": "vite preview"
   },

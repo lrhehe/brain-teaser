@@ -46,13 +46,13 @@ export default function AnswerButton({ answer, pronunciation, onClick, isSelecte
                     <ruby
                         key={index}
                         onClick={(e) => handleCharClick(e, char)}
-                        className={`text-lg md:text-2xl font-bold leading-none cursor-pointer active:scale-90 transition-all
+                        className={`text-2xl md:text-4xl font-bold leading-none cursor-pointer active:scale-90 transition-all
                             ${isSelected
                                 ? 'text-white hover:text-yellow-200'
                                 : 'text-gray-800 hover:text-indigo-500'}`}
                     >
                         {char}
-                        {pin && <rt className={`text-[8px] md:text-xs font-medium mb-0.5 ${isSelected ? 'text-indigo-200' : 'text-indigo-400'}`}>{pin}</rt>}
+                        {pin && <rt className={`text-xs md:text-sm font-medium mb-0.5 ${isSelected ? 'text-indigo-200' : 'text-indigo-400'}`}>{pin}</rt>}
                     </ruby>
                 ))}
             </div>

@@ -1,25 +1,11 @@
 /**
- * TTS Utility — Edge TTS (browser) with SpeechSynthesis fallback
+ * TTS Utility — Chrome SpeechSynthesis API
  *
- * Priority:
- *   1. Use edge-tts-universal browser API → high-quality Microsoft neural voices
- *   2. Fall back to browser SpeechSynthesis if Edge TTS unavailable
- *
- * Audio results are cached as blob URLs to avoid repeated synthesis.
+ * Uses the browser-native Web Speech API (speechSynthesis) for text-to-speech.
+ * Prefers high-quality voices (Neural / Premium / Google) when available.
  */
-import { EdgeTTS } from 'edge-tts-universal/browser';
 
-// ── Cache & state ─────────────────────────────────────────────────
-const audioCache = new Map();
-let currentAudio = null;
-
-// Voice mapping
-const VOICES = {
-    'zh-CN': 'zh-CN-XiaoxiaoNeural',
-    'en-US': 'en-US-AriaNeural',
-};
-
-// ── SpeechSynthesis fallback ──────────────────────────────────────
+// ── Voice loading ─────────────────────────────────────────────────
 let voices = [];
 
 const loadVoices = () => {
@@ -34,7 +20,8 @@ if (typeof window !== 'undefined' && window.speechSynthesis) {
 }
 
 const getVoice = (lang) => {
-    const filteredVoices = voices.filter(v => v.lang.includes(lang.split('-')[0]));
+    const langPrefix = lang.split('-')[0];
+    const filteredVoices = voices.filter(v => v.lang.includes(langPrefix));
     return filteredVoices.find(v => v.name.includes('Neural')) ||
         filteredVoices.find(v => v.name.includes('Premium')) ||
         filteredVoices.find(v => v.name.includes('Google')) ||
@@ -42,11 +29,16 @@ const getVoice = (lang) => {
         filteredVoices[0] || null;
 };
 
-const speakFallback = (text, lang) => {
+// ── Main speak function ───────────────────────────────────────────
+export const speak = (text, lang = 'zh-CN') => {
+    if (!text || !text.trim()) return;
     if (!window.speechSynthesis) return;
+
+    // Stop any currently playing speech
     if (window.speechSynthesis.speaking) {
         window.speechSynthesis.cancel();
     }
+
     const utterance = new SpeechSynthesisUtterance(text);
     const voice = getVoice(lang);
     if (voice) utterance.voice = voice;
@@ -54,51 +46,4 @@ const speakFallback = (text, lang) => {
     utterance.rate = lang === 'en-US' ? 0.95 : 1.0;
     utterance.pitch = 1.1;
     window.speechSynthesis.speak(utterance);
-};
-
-// ── Edge TTS synthesis ────────────────────────────────────────────
-const synthesizeEdgeTTS = async (text, lang) => {
-    const voice = VOICES[lang] || VOICES['zh-CN'];
-    const tts = new EdgeTTS(text, voice);
-    const result = await tts.synthesize();
-    // result.audio is a Blob
-    return URL.createObjectURL(result.audio);
-};
-
-// ── Main speak function ───────────────────────────────────────────
-export const speak = async (text, lang = 'zh-CN') => {
-    if (!text || !text.trim()) return;
-
-    // Stop any currently playing audio
-    if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-        currentAudio = null;
-    }
-    if (window.speechSynthesis?.speaking) {
-        window.speechSynthesis.cancel();
-    }
-
-    const cacheKey = `${text}|${lang}`;
-
-    // Check cache first
-    if (audioCache.has(cacheKey)) {
-        const audio = new Audio(audioCache.get(cacheKey));
-        currentAudio = audio;
-        audio.play().catch(() => { });
-        return;
-    }
-
-    // Try Edge TTS first
-    try {
-        const blobUrl = await synthesizeEdgeTTS(text, lang);
-        audioCache.set(cacheKey, blobUrl);
-
-        const audio = new Audio(blobUrl);
-        currentAudio = audio;
-        audio.play().catch(() => { });
-    } catch {
-        // Fallback to browser SpeechSynthesis
-        speakFallback(text, lang);
-    }
 };

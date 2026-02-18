@@ -1,0 +1,2488 @@
+[
+  {
+    "id": 1,
+    "type": "logic",
+    "text": "什么东西早晨四条腿，中午两条腿，晚上三条腿？",
+    "options": [
+      {
+        "id": "a",
+        "text": "猫",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "人",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "桌子",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "type": "math",
+    "text": "树上有5只鸟，飞走了2只，还剩几只？",
+    "options": [
+      {
+        "id": "a",
+        "text": "2",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "3",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "5",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "visual",
+    "text": "哪个颜色是红色的？",
+    "options": [
+      {
+        "id": "a",
+        "text": "🍎",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "🍌",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "🍇",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "logic",
+    "text": "什么东西越洗越脏？",
+    "options": [
+      {
+        "id": "a",
+        "text": "衣服",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "水",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "手",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "type": "logic",
+    "text": "什么人一年只工作一天？",
+    "options": [
+      {
+        "id": "a",
+        "text": "圣诞老人 🎅",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "医生 👨‍⚕️",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "老师 👩‍🏫",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "daily",
+    "text": "什么东西天气越热，它爬得越高？",
+    "options": [
+      {
+        "id": "a",
+        "text": "飞机",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "温度计",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "大雁",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "type": "animal",
+    "text": "什么动物你打死了它却流了你的血？",
+    "options": [
+      {
+        "id": "a",
+        "text": "苍蝇",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "蚊子",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "跳蚤",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "type": "daily",
+    "text": "谁天天去看病？",
+    "options": [
+      {
+        "id": "a",
+        "text": "病人",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "医生",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "护士",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "type": "daily",
+    "text": "什么照片看不出照的是谁？",
+    "options": [
+      {
+        "id": "a",
+        "text": "艺术照",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "X光片",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "全身照",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "type": "daily",
+    "text": "什么布剪不断？",
+    "options": [
+      {
+        "id": "a",
+        "text": "棉布",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "瀑布",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "丝袜",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "type": "logic",
+    "text": "南来北往的两个人，顺利通过独木桥，为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "飞过去的",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "方向不同",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "侧身过去的",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "type": "daily",
+    "text": "用椰子和西瓜打头，哪个比较痛？",
+    "options": [
+      {
+        "id": "a",
+        "text": "椰子",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "头比较痛",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "西瓜",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "type": "daily",
+    "text": "小王刷牙吹口哨，怎么做到的？",
+    "options": [
+      {
+        "id": "a",
+        "text": "吹哨子",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "刷的是假牙",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "嘴巴大",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "math",
+    "text": "三个孩子吃三个饼要3分钟，九十个孩子吃九十个饼要多久？",
+    "options": [
+      {
+        "id": "a",
+        "text": "90分钟",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "3分钟",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "30分钟",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "daily",
+    "text": "冬瓜、黄瓜、西瓜、南瓜都能吃，什么瓜不能吃？",
+    "options": [
+      {
+        "id": "a",
+        "text": "苦瓜",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "傻瓜",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "丝瓜",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "daily",
+    "text": "什么门永远关不上?",
+    "options": [
+      {
+        "id": "a",
+        "text": "车门",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "球门",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "房门",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "daily",
+    "text": "什么地方开口说话要付钱?",
+    "options": [
+      {
+        "id": "a",
+        "text": "超市",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "打电话",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "饭店",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "daily",
+    "text": "早晨醒来，每个人做的第一件事是什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "穿衣服",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "睁眼",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "起床",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "daily",
+    "text": "什么枪把人打跑却不伤人？",
+    "options": [
+      {
+        "id": "a",
+        "text": "散弹枪",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "水枪",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "机关枪",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "type": "daily",
+    "text": "这种药你不用上药店买就能吃到，是什么药？",
+    "options": [
+      {
+        "id": "a",
+        "text": "感冒药",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "后悔药",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "止痛药",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "type": "daily",
+    "text": "打什么东西毫不费力?",
+    "options": [
+      {
+        "id": "a",
+        "text": "打球",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "打瞌睡",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "打火机",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "logic",
+    "text": "盖楼要从第几层开始盖?",
+    "options": [
+      {
+        "id": "a",
+        "text": "顶层",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "第一层",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "地基",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "math",
+    "text": "8个数字“8”，如何使它等于1000?",
+    "options": [
+      {
+        "id": "a",
+        "text": "888+88+8+8+8",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "888+8+8+8+8",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "88+8+8+8+8",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "type": "logic",
+    "text": "哪项比赛是往后跑的?",
+    "options": [
+      {
+        "id": "a",
+        "text": "短跑",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "拔河",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "马拉松",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "type": "daily",
+    "text": "袜口为什么会有一个洞？",
+    "options": [
+      {
+        "id": "a",
+        "text": "破了",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "为了穿进去",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "透气",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "type": "math",
+    "text": "一斤棉花和一斤铁哪个重？",
+    "options": [
+      {
+        "id": "a",
+        "text": "铁",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "一样重",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "棉花",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "type": "animal",
+    "text": "什么老鼠用两条腿走路？",
+    "options": [
+      {
+        "id": "a",
+        "text": "耗子",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "米老鼠",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "仓鼠",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "animal",
+    "text": "什么鸭子用两条腿走路？",
+    "options": [
+      {
+        "id": "a",
+        "text": "唐老鸭",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "所有鸭子",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "北京奶鸭",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "type": "daily",
+    "text": "什么汤不能喝？",
+    "options": [
+      {
+        "id": "a",
+        "text": "鱼汤",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "赴汤蹈火",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "鸡汤",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "type": "daily",
+    "text": "什么人靠别人的脑袋生活?",
+    "options": [
+      {
+        "id": "a",
+        "text": "僵尸",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "理发师",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "帽子商",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "daily",
+    "text": "什么水取之不尽用之不竭？",
+    "options": [
+      {
+        "id": "a",
+        "text": "自来水",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "口水",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "海水",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "daily",
+    "text": "制造日期与有效日期是同一天的产品是什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "牛奶",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "报纸",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "蛋糕",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "math",
+    "text": "算式 3 + 1 = 5 在什么情况下成立？",
+    "options": [
+      {
+        "id": "a",
+        "text": "总是",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "算错的时候",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "从来不",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "type": "daily",
+    "text": "什么东西越热越爱出来？",
+    "options": [
+      {
+        "id": "a",
+        "text": "雪机",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "汗",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "口水",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "daily",
+    "text": "什么东西倒立后会增加一半？",
+    "options": [
+      {
+        "id": "a",
+        "text": "9",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "6",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "8",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "daily",
+    "text": "太平洋的中间是什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "水",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "平字",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "岛",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "type": "daily",
+    "text": "世界上哪个地方下午比早上先到？",
+    "options": [
+      {
+        "id": "a",
+        "text": "南极",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "在字典里",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "在梦里",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "type": "daily",
+    "text": "什么贵重的东西最容易不翼而飞？",
+    "options": [
+      {
+        "id": "a",
+        "text": "钞票",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "人造卫星",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "气球",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "type": "daily",
+    "text": "什么鸡没有翅膀？",
+    "options": [
+      {
+        "id": "a",
+        "text": "公鸡",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "田鸡",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "母鸡",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "type": "daily",
+    "text": "每天早上从东方升起，西方落下，猜一种五个字的东西？",
+    "options": [
+      {
+        "id": "a",
+        "text": "是是是太阳",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "月亮",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "向日葵",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "type": "logic",
+    "text": "曹兰在马路边拦下一辆计程车，当她坐进车中后立刻被司机赶出来，为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "她说不告诉你去哪",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "车坏了",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "她没带钱",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "type": "logic",
+    "text": "小陈半夜吃泡面，为什么一面吃一面眼盯着表？",
+    "options": [
+      {
+        "id": "a",
+        "text": "在计时",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "怕迟到",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "那包面的食用期到今天",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "type": "daily",
+    "text": "报纸新闻和电视新闻最大的不同在哪里？",
+    "options": [
+      {
+        "id": "a",
+        "text": "一个有图一个没图",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "报纸看完了可以保存",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "速度不同",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "type": "logic",
+    "text": "有架飞机失事，现场支离破碎，令人惊讶的是找不到任何伤者，为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "飞机是空的",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "那是一架遥控飞机",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "乘客都跳伞了",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "type": "logic",
+    "text": "老张不小心吞了一枚金币，为什么到十年后才去手术取出来呢？",
+    "options": [
+      {
+        "id": "a",
+        "text": "他怕疼",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "医生不在",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "因为当时不急着用钱",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "type": "logic",
+    "text": "天黑一次亮一次就是一天，可有一次天黑了两次仍然只过了一天，为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "在南极",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "停电了",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "碰上日全食了",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "type": "daily",
+    "text": "有一个人发高烧50度，他这时该找谁帮忙？",
+    "options": [
+      {
+        "id": "a",
+        "text": "护士",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "消防队",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "医生",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "type": "daily",
+    "text": "一人一点是什么字？",
+    "options": [
+      {
+        "id": "a",
+        "text": "太",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "犬",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "大",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "type": "animal",
+    "text": "山岗上有三只狐狸，猎人开枪打死了一只，问山岗上还有几只狐狸？",
+    "options": [
+      {
+        "id": "a",
+        "text": "没有了",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "一只",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "两只",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "type": "animal",
+    "text": "一只羊碰到一头老虎，非但不怕，而且还把那头老虎给吃了，为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "老虎是假的标本",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "那是只纸老虎",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "羊比老虎大",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "type": "animal",
+    "text": "家有家规，国有国规，那动物园里有啥规？",
+    "options": [
+      {
+        "id": "a",
+        "text": "园规",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "动物规则",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "乌龟",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "type": "animal",
+    "text": "有种动物，大小像只猫，长相又像虎，这是什么动物？",
+    "options": [
+      {
+        "id": "a",
+        "text": "豹猫",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "小老虎",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "猫科动物",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "type": "animal",
+    "text": "什么动物在天上是4只脚，在地上是2只脚，在水里是3只脚？",
+    "options": [
+      {
+        "id": "a",
+        "text": "鸭子",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "怪物",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "青蛙",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "type": "animal",
+    "text": "动物园里，小明紧挨着老虎合影留念，老虎却没有咬他，为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "老虎被关着",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "老虎吃饱了",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "那是只假老虎",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "type": "animal",
+    "text": "哪一种动物，虽说是金，却不是真，大眼孩儿，爱穿长裙？",
+    "options": [
+      {
+        "id": "a",
+        "text": "金丝猴",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "金鱼",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "金龟子",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "type": "animal",
+    "text": "动物园中，大象鼻子最长，鼻子第二长的是什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "小象",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "长颈鹿",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "犀牛",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "type": "animal",
+    "text": "如果动物园失火了，最先逃出来的哪一种动物？",
+    "options": [
+      {
+        "id": "a",
+        "text": "兔子",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "人",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "猴子",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "type": "animal",
+    "text": "恐龙为什么会灭亡？",
+    "options": [
+      {
+        "id": "a",
+        "text": "气候变化",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "那个时候没有动物保护协会",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "小行星撞地球",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "type": "animal",
+    "text": "什么动物即没有祖先又没有子孙？",
+    "options": [
+      {
+        "id": "a",
+        "text": "独角兽",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "熊猫",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "骡子",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "type": "animal",
+    "text": "进动物园后，最先看到的是哪种动物？",
+    "options": [
+      {
+        "id": "a",
+        "text": "猴子",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "人",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "大象",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "type": "animal",
+    "text": "什么动物坐也是坐，站也是坐，走也是坐？",
+    "options": [
+      {
+        "id": "a",
+        "text": "蛇",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "企鹅",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "青蛙",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "type": "animal",
+    "text": "北极里有一种动物，背上有两个峰四只脚，猜一种五个字的动物？",
+    "options": [
+      {
+        "id": "a",
+        "text": "迷失的骆驼",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "北极熊宝宝",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "双峰企鹅",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "type": "animal",
+    "text": "什么动物天天熬夜？",
+    "options": [
+      {
+        "id": "a",
+        "text": "猫头鹰",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "蝙蝠",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "熊猫，你看它的黑眼圈",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "type": "animal",
+    "text": "动物园里有一只可爱的熊猫，为什么人们都不敢接近它？",
+    "options": [
+      {
+        "id": "a",
+        "text": "正在吃东西",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "它会咬人",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "油漆未干",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "type": "daily",
+    "text": "你能做、我能做、大家都能做，一个人能做、两个人不能一起做。这是做什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "做梦",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "独自思考",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "打喷嚏",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "type": "math",
+    "text": "什么时候4-3=5？",
+    "options": [
+      {
+        "id": "a",
+        "text": "用罗马数字时",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "算错时",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "数学里不可能",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "type": "daily",
+    "text": "什么东西打破了才能吃？",
+    "options": [
+      {
+        "id": "a",
+        "text": "鸡蛋",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "核桃",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "西瓜",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "type": "daily",
+    "text": "让病人出一身大汗的妙方是什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "多运动",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "当着病人的面把补药全吃掉",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "蒸桑拿",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "type": "math",
+    "text": "有一样东西不管你喜欢与否，它却每年一定要增加一点，这是什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "体重",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "皱纹",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "年龄",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "type": "daily",
+    "text": "什么东西装玻璃，爱把鼻子当马骑？",
+    "options": [
+      {
+        "id": "a",
+        "text": "鱼缸",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "花瓶",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "眼镜",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "type": "animal",
+    "text": "大象的左耳朵像什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "右耳朵",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "树叶",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "扇子",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "type": "daily",
+    "text": "把火熄灭最快的方法是什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "给火字加上一横",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "用水浇",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "用灭火器",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "type": "daily",
+    "text": "如果你要想使梦成为现实首先要做什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "醒来",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "做计划",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "努力工作",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "type": "daily",
+    "text": "贝多芬给了学生什么样的启示？",
+    "options": [
+      {
+        "id": "a",
+        "text": "音乐改变人生",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "背了课本就会多得分",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "坚持不放弃",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "type": "daily",
+    "text": "什么东西经常会来，但却从没真正来过？",
+    "options": [
+      {
+        "id": "a",
+        "text": "明天",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "好运",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "外星人",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "type": "daily",
+    "text": "报纸上登的消息不一定百分之百是真的，但什么消息绝对假不了？",
+    "options": [
+      {
+        "id": "a",
+        "text": "天气预报",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "日期",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "广告",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "type": "logic",
+    "text": "为什么人们要到市场上去？",
+    "options": [
+      {
+        "id": "a",
+        "text": "因为要逛街",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "因为市场不会过来",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "因为要买东西",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "type": "logic",
+    "text": "为什么先看见闪电后听到雷声？",
+    "options": [
+      {
+        "id": "a",
+        "text": "因为眼睛在前耳朵在后",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "闪电离得近",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "光速比声速快",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "type": "animal",
+    "text": "为什么青蛙可以跳得比树高？",
+    "options": [
+      {
+        "id": "a",
+        "text": "青蛙腿很有力",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "因为树不会跳",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "树不高",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "type": "logic",
+    "text": "为什么阿福总要等老师动手才去听老师的话？",
+    "options": [
+      {
+        "id": "a",
+        "text": "他是个聋子",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "他调皮",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "他叛逆",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "type": "logic",
+    "text": "为什么拿破仑的字典里没有难字？",
+    "options": [
+      {
+        "id": "a",
+        "text": "他意志坚强",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "因为他的字典是法文的",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "他没有字典",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "type": "logic",
+    "text": "为什么刘备三顾茅庐诸葛亮才肯见他？",
+    "options": [
+      {
+        "id": "a",
+        "text": "因为前两次没带礼",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "诸葛亮不在家",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "在考验诚意",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "type": "animal",
+    "text": "为什么老王家的马能吃掉老张家的象？",
+    "options": [
+      {
+        "id": "a",
+        "text": "象生病了",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "他们在下象棋",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "马很凶猛",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "type": "logic",
+    "text": "为什么警察要系白皮带？",
+    "options": [
+      {
+        "id": "a",
+        "text": "是制服规定",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "不系皮带裤子会掉下来",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "为了好看",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "type": "logic",
+    "text": "为什么冲天炮射不到星星？",
+    "options": [
+      {
+        "id": "a",
+        "text": "因为星星会闪",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "因为炮太弱",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "因为太远了",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "type": "daily",
+    "text": "你的阿姨有个姐姐，但你不叫她阿姨，她是谁？",
+    "options": [
+      {
+        "id": "a",
+        "text": "妈妈",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "奶奶",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "阿姨的朋友",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "type": "daily",
+    "text": "谁会连续摇头半个小时以上？",
+    "options": [
+      {
+        "id": "a",
+        "text": "看球赛的人",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "风扇",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "摇头娃娃",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "type": "daily",
+    "text": "除了司机，还有谁可以每天搭公车而不必给钱？",
+    "options": [
+      {
+        "id": "a",
+        "text": "小孩",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "老人",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "售票员",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "type": "daily",
+    "text": "泰山是人猿养大的，蝙蝠侠是谁养大的？",
+    "options": [
+      {
+        "id": "a",
+        "text": "他的爸爸妈妈",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "蝙蝠养大的",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "管家养大的",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "type": "daily",
+    "text": "谁经常买鞋自己不穿却给别人穿？",
+    "options": [
+      {
+        "id": "a",
+        "text": "妈妈",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "卖鞋的人",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "设计师",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "type": "animal",
+    "text": "老虎的弟弟是谁？",
+    "options": [
+      {
+        "id": "a",
+        "text": "小老虎",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "豹子",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "猫",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "type": "daily",
+    "text": "第一个登上月球的中国姑娘是谁？",
+    "options": [
+      {
+        "id": "a",
+        "text": "刘洋",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "王亚平",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "嫦娥",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "type": "daily",
+    "text": "谁说话的声音传得最远？",
+    "options": [
+      {
+        "id": "a",
+        "text": "播音员",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "歌手",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "打电话的人",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "type": "daily",
+    "text": "哪一种草的生命力最强？",
+    "options": [
+      {
+        "id": "a",
+        "text": "仙人掌",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "杂草",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "墙头草",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "type": "animal",
+    "text": "蚂蚁、蜜蜂和蜈蚣，哪一种昆虫最不贪钱？",
+    "options": [
+      {
+        "id": "a",
+        "text": "蜈蚣（无功不受禄）",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "蚂蚁",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "蜜蜂",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "type": "daily",
+    "text": "哪一种竹子不长在土里？",
+    "options": [
+      {
+        "id": "a",
+        "text": "爆竹",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "熊猫竹",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "水竹",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "type": "daily",
+    "text": "哪种火车车厢最少？",
+    "options": [
+      {
+        "id": "a",
+        "text": "救火车",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "货运火车",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "地铁",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "type": "animal",
+    "text": "哪儿的海不产鱼？",
+    "options": [
+      {
+        "id": "a",
+        "text": "死海",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "辞海",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "里海",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "type": "daily",
+    "text": "哪一件衣服最耐穿？",
+    "options": [
+      {
+        "id": "a",
+        "text": "最不喜欢的那件",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "皮衣",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "牛仔衣",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "type": "daily",
+    "text": "太阳和月亮在一起是哪一天？",
+    "options": [
+      {
+        "id": "a",
+        "text": "月食那天",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "明天",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "日食那天",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "type": "daily",
+    "text": "一辆汽车过90度弯时，哪个轮子一定离开地面？",
+    "options": [
+      {
+        "id": "a",
+        "text": "左前轮",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "右后轮",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "备用轮胎",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "type": "daily",
+    "text": "哪种报刊发行量最少？",
+    "options": [
+      {
+        "id": "a",
+        "text": "学术杂志",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "内部刊物",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "电报",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "type": "daily",
+    "text": "金钟奖、金马奖、金像奖哪个对国家贡献最大？",
+    "options": [
+      {
+        "id": "a",
+        "text": "金钟奖（精忠报国）",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "金像奖",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "金马奖",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "type": "math",
+    "text": "实行减肥时，最容易瘦的是哪一个部位？",
+    "options": [
+      {
+        "id": "a",
+        "text": "大腿",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "肚子",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "钱包",
+        "isCorrect": true
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "type": "daily",
+    "text": "哪一个月有28天？",
+    "options": [
+      {
+        "id": "a",
+        "text": "只有闰年的二月",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "每个月都有",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "二月",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "type": "daily",
+    "text": "哪家人最多？",
+    "options": [
+      {
+        "id": "a",
+        "text": "幼儿园",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "国家",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "大户人家",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "type": "math",
+    "text": "小华和小涵约好中午12点在学校吃饭，小华看了表后匆匆去找小涵，小涵说你相信9+4=1吗？为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "九点钟加四点钟是一点钟",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "算术题",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "小涵在开玩笑",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "type": "logic",
+    "text": "有个男子住在十三楼，他每天出门必搭电梯到一楼，但回来时只搭到四楼然后再爬楼上去，为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "电梯坏了",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "他个子太矮按不到按钮",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "他喜欢锻炼",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "type": "logic",
+    "text": "我有九个苹果，却必须分给十三个小朋友，我该怎么办？",
+    "options": [
+      {
+        "id": "a",
+        "text": "榨果汁",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "再去买几个",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "每人分一点",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "type": "animal",
+    "text": "怀孕的母狗怕人踢它，可是有个家伙踢它，它既不躲避也不生气，为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "因为那家伙在它的肚子里踢",
+        "isCorrect": true
+      },
+      {
+        "id": "b",
+        "text": "它睡着了",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "那是它的主人",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "type": "daily",
+    "text": "我伯父的弟媳，但不是我的叔母，那她是谁？",
+    "options": [
+      {
+        "id": "a",
+        "text": "我舅妈",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "我母亲",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "我姑姑",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "type": "animal",
+    "text": "小明到动物园玩，看到一只大黑熊，很高兴地摸摸它，但那只大黑熊一点也不生气，为什么？",
+    "options": [
+      {
+        "id": "a",
+        "text": "黑熊性格温顺",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "那只大黑熊是个标本",
+        "isCorrect": true
+      },
+      {
+        "id": "c",
+        "text": "黑熊在睡觉",
+        "isCorrect": false
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "type": "animal",
+    "text": "在动物园里，最先看见的是什么关在笼子里的动物？",
+    "options": [
+      {
+        "id": "a",
+        "text": "老虎",
+        "isCorrect": false
+      },
+      {
+        "id": "b",
+        "text": "猴子",
+        "isCorrect": false
+      },
+      {
+        "id": "c",
+        "text": "售票员",
+        "isCorrect": true
+      }
+    ]
+  }
+]

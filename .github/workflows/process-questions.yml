@@ -1,0 +1,79 @@
+name: Process Incremental Questions
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/data/questions.json'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  process:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Check for incremental questions
+        id: check
+        run: |
+          node -e "
+            const qs = require('./src/data/questions.json');
+            const noPron = qs.filter(q => !q.pronunciation || Object.keys(q.pronunciation).length === 0).length;
+            const noAudio = qs.filter(q => q.pronunciation && Object.values(q.pronunciation).some(p => p.ttsText && !p.audioFile)).length;
+            console.log('Questions without pronunciation:', noPron);
+            console.log('Questions with missing audio:', noAudio);
+            // Set outputs
+            const fs = require('fs');
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'needs_pronunciation=' + (noPron > 0) + '\n');
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'needs_audio=' + (noAudio > 0) + '\n');
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'no_pron_count=' + noPron + '\n');
+            fs.appendFileSync(process.env.GITHUB_OUTPUT, 'no_audio_count=' + noAudio + '\n');
+          "
+
+      - name: Generate pronunciation data
+        if: steps.check.outputs.needs_pronunciation == 'true'
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+        run: |
+          echo "🗣️ Generating pronunciation for ${{ steps.check.outputs.no_pron_count }} questions..."
+          node scripts/generate_pronunciation.mjs
+
+      - name: Generate audio files
+        if: steps.check.outputs.needs_pronunciation == 'true' || steps.check.outputs.needs_audio == 'true'
+        env:
+          DASHSCOPE_API_KEY: ${{ secrets.DASHSCOPE_API_KEY }}
+        run: |
+          echo "🔊 Generating audio files..."
+          node scripts/generate_audio.mjs
+
+      - name: Commit and push changes
+        if: steps.check.outputs.needs_pronunciation == 'true' || steps.check.outputs.needs_audio == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/data/questions.json public/audio/
+          # Only commit if there are actual changes
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            PRON_COUNT="${{ steps.check.outputs.no_pron_count }}"
+            AUDIO_COUNT="${{ steps.check.outputs.no_audio_count }}"
+            git commit -m "chore: generate pronunciation & audio for incremental questions
+
+          - Pronunciation: ${PRON_COUNT} questions processed
+          - Audio: ${AUDIO_COUNT} questions with missing audio processed"
+            git push
+          fi

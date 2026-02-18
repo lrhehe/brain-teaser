@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 /**
  * Script to add scraped brain teaser questions to questions.json
  * Generates 3-choice options with randomized correct answer position
@@ -37,6 +38,8 @@ const rawData = [
     { q: "哪一种动物，虽说是金，却不是真，大眼孩儿，爱穿长裙？", a: "金鱼", w: ["金丝猴", "金龟子"] },
     { q: "动物园中，大象鼻子最长，鼻子第二长的是什么？", a: "小象", w: ["长颈鹿", "犀牛"] },
     { q: "如果动物园失火了，最先逃出来的哪一种动物？", a: "人", w: ["猴子", "兔子"] },
+    { q: "恐龙为什么会灭亡？", a: "那个时候没有动物保护协会", w: ["小行星撞地球", "气候变化"] },
+    { q: "恐龙为什么会灭亡？", a: "那个时候没有动物保护协会", w: ["小行星撞地球", "气候变化"] },
     { q: "恐龙为什么会灭亡？", a: "那个时候没有动物保护协会", w: ["小行星撞地球", "气候变化"] },
     { q: "武松到底犯了什么罪，为何被抓？", a: "打死保护动物老虎", w: ["醉酒闹事", "杀人"] },
     { q: "什么动物即没有祖先又没有子孙？", a: "骡子", w: ["熊猫", "独角兽"] },
@@ -177,5 +180,3 @@ console.log(`New questions to add: ${newQuestions.length}`);
 // Merge and write
 const allQuestions = [...existing, ...newQuestions];
 writeFileSync(questionsPath, JSON.stringify(allQuestions, null, 2) + '\n', 'utf8');
-console.log(`Total questions now: ${allQuestions.length}`);
-console.log('Done! Updated questions.json');

@@ -151,6 +151,26 @@ DASHSCOPE_API_KEY=sk-xxx node scripts/generate_audio.mjs
 npm run build
 ```
 
+## CI/CD
+
+项目配置了两个 GitHub Actions 工作流：
+
+| 工作流 | 触发条件 | 作用 |
+|--------|---------|------|
+| **Deploy to GitHub Pages** | push 到 `main` | 构建并部署到 GitHub Pages |
+| **Process Incremental Questions** | `questions.json` 变更 / 手动触发 | 自动为新题目生成拼音和音频 |
+
+### 增量题目处理流程
+
+当你往 `questions.json` 中添加新题目（只需填写 `text` 和 `options`）并 push 到 `main` 后，GitHub Action 会自动：
+
+1. **检测** — 扫描哪些题目缺少 `pronunciation` 数据或 `audioFile`
+2. **生成拼音** — 调用 Qwen-Plus 为新题目的每个汉字生成拼音、组词、TTS 文本
+3. **生成音频** — 调用 Qwen3-TTS-Flash 将 TTS 文本合成 MP3 并保存到 `public/audio/`
+4. **提交回仓库** — 将更新后的 `questions.json` 和新音频文件 commit 回 `main`
+
+> **前提**：需要在 GitHub 仓库的 `Settings → Secrets → Actions` 中添加 `DASHSCOPE_API_KEY` 密钥。
+
 ## 技术栈
 
 - **框架**：React 19 + Vite 7

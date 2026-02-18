@@ -1,15 +1,23 @@
 import { motion } from 'framer-motion';
-import { speak } from '../utils/tts';
+import { speakChar } from '../utils/tts';
 
 export default function QuestionCard({ question }) {
+    const pronunciation = question.pronunciation || {};
+
     const handleCharClick = (char) => {
-        if (char.trim()) {
-            speak(char, 'zh-CN');
+        if (!char.trim()) return;
+        const info = pronunciation[char];
+        if (info?.audioFile) {
+            speakChar(info.audioFile);
         }
     };
 
-    // Build ruby pairs: use question.ruby if available, otherwise split text into [char, ""] pairs
-    const rubyPairs = question.ruby || question.text.split('').map(c => [c, '']);
+    // Build ruby pairs from pronunciation data
+    const chars = [...question.text];
+    const rubyPairs = chars.map(char => {
+        const info = pronunciation[char];
+        return [char, info?.pinyin || ''];
+    });
 
     return (
         <motion.div
@@ -20,17 +28,6 @@ export default function QuestionCard({ question }) {
             {/* Background decoration */}
             <div className="absolute top-0 left-0 w-24 h-24 md:w-32 md:h-32 bg-yellow-200/20 blur-2xl md:blur-3xl -translate-x-1/2 -translate-y-1/2 overflow-hidden pointer-events-none" />
             <div className="absolute bottom-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-indigo-200/20 blur-2xl md:blur-3xl translate-x-1/2 translate-y-1/2 overflow-hidden pointer-events-none" />
-
-            {/* Fallback pinyin sentence if no ruby */}
-            {!question.ruby && question.pinyin && (
-                <motion.div
-                    initial={{ opacity: 0, y: -10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    className="mb-4 text-indigo-500 font-medium tracking-wide text-sm md:text-lg opacity-80 relative z-10"
-                >
-                    {question.pinyin}
-                </motion.div>
-            )}
 
             <div className="relative z-10 flex flex-wrap justify-center items-end gap-x-1 gap-y-6 md:gap-y-10">
                 {rubyPairs.map(([char, pin], index) => (

@@ -1,11 +1,36 @@
 /**
- * TTS Utility — Chrome SpeechSynthesis API
+ * TTS Utility
  *
- * Uses the browser-native Web Speech API (speechSynthesis) for text-to-speech.
- * Prefers high-quality voices (Neural / Premium / Google) when available.
+ * - speakChar(audioFile): plays a pre-generated audio file from /audio/
+ * - speak(text, lang):    uses Chrome SpeechSynthesis for English feedback phrases
  */
 
-// ── Voice loading ─────────────────────────────────────────────────
+// ── Pre-generated audio playback ──────────────────────────────────
+let currentAudio = null;
+
+/**
+ * Play a pre-generated character audio file.
+ * @param {string} audioFile - filename like "a1b2c3d4e5f6.mp3"
+ */
+export const speakChar = (audioFile) => {
+    if (!audioFile) return;
+
+    // Stop any currently playing audio
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+    }
+    if (window.speechSynthesis?.speaking) {
+        window.speechSynthesis.cancel();
+    }
+
+    const audio = new Audio(`/audio/${audioFile}`);
+    currentAudio = audio;
+    audio.play().catch(() => { });
+};
+
+// ── Chrome SpeechSynthesis (for English feedback) ─────────────────
 let voices = [];
 
 const loadVoices = () => {
@@ -29,12 +54,19 @@ const getVoice = (lang) => {
         filteredVoices[0] || null;
 };
 
-// ── Main speak function ───────────────────────────────────────────
+/**
+ * Speak text using Chrome SpeechSynthesis (used for English feedback).
+ */
 export const speak = (text, lang = 'zh-CN') => {
     if (!text || !text.trim()) return;
     if (!window.speechSynthesis) return;
 
-    // Stop any currently playing speech
+    // Stop any currently playing audio
+    if (currentAudio) {
+        currentAudio.pause();
+        currentAudio.currentTime = 0;
+        currentAudio = null;
+    }
     if (window.speechSynthesis.speaking) {
         window.speechSynthesis.cancel();
     }

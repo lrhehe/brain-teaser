@@ -219,6 +219,7 @@ function App() {
                 <AnswerButton
                   key={option.id}
                   answer={option}
+                  pronunciation={currentQuestion.pronunciation}
                   onClick={() => handleSelect(option)}
                   isSelected={selectedOption?.id === option.id}
                   disabled={isAnswered}

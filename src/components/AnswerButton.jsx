@@ -1,17 +1,23 @@
 import { motion } from 'framer-motion';
-import { speak } from '../utils/tts';
+import { speakChar } from '../utils/tts';
 
-export default function AnswerButton({ answer, onClick, isSelected, disabled }) {
+export default function AnswerButton({ answer, pronunciation, onClick, isSelected, disabled }) {
     const handleCharClick = (e, char) => {
         e.stopPropagation();
         e.preventDefault();
-        if (char.trim()) {
-            speak(char, 'zh-CN');
+        if (!char.trim()) return;
+        const info = pronunciation?.[char];
+        if (info?.audioFile) {
+            speakChar(info.audioFile);
         }
     };
 
-    // Build ruby pairs: use answer.ruby if available, otherwise split text into [char, ""] pairs
-    const rubyPairs = answer.ruby || answer.text.split('').map(c => [c, '']);
+    // Build ruby pairs from pronunciation data
+    const chars = [...answer.text];
+    const rubyPairs = chars.map(char => {
+        const info = pronunciation?.[char];
+        return [char, info?.pinyin || ''];
+    });
 
     return (
         <motion.div

@@ -1,19 +1,17 @@
 #!/usr/bin/env node
 /**
- * Generate pronunciation data for each question using Qwen LLM.
+ * Generate ttsText for each character's pronunciation data using DeepSeek API.
  *
- * Optimizations:
- *   - Builds a dictionary from existing pronunciation data
- *   - Non-polyphonic characters (单音字) are reused from the dictionary — no API call
- *   - Only polyphonic characters (多音字) and unknown characters need API calls
- *   - Parallel processing with configurable concurrency
- *   - Periodic save to prevent data loss on interruption
+ * For each question, collects all unique Chinese characters that lack ttsText,
+ * uses a dictionary cache to reuse known pronunciations, and calls DeepSeek
+ * only for unknown or polyphonic characters.
+ *
+ * The ttsText is a child-friendly phrase that helps kids remember the character,
+ * e.g. "苹果的苹" for 苹, "妈妈的妈" for 妈.
  *
  * Usage:
- *   DASHSCOPE_API_KEY=sk-xxx node scripts/generate_pronunciation.mjs
- *   DASHSCOPE_API_KEY=sk-xxx CONCURRENCY=10 node scripts/generate_pronunciation.mjs
- *
- * Results are written back into questions.json as a `pronunciation` field per question.
+ *   source .env && DEEPSEEK_API_KEY=$DEEPSEEK_API_KEY node scripts/generate_pronunciation.mjs
+ *   CONCURRENCY=10 DEEPSEEK_API_KEY=sk-xxx node scripts/generate_pronunciation.mjs
  */
 import { readFileSync, writeFileSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
@@ -26,21 +24,20 @@ const dictPath = join(__dirname, '..', 'src', 'data', 'pronunciation_dict.json')
 
 const CONCURRENCY = parseInt(process.env.CONCURRENCY || '5', 10);
 
-const apiKey = process.env.DASHSCOPE_API_KEY;
+const apiKey = process.env.DEEPSEEK_API_KEY;
 if (!apiKey) {
-    console.error('Error: DASHSCOPE_API_KEY environment variable is required.');
+    console.error('Error: DEEPSEEK_API_KEY environment variable is required.');
     process.exit(1);
 }
 
 const client = new OpenAI({
     apiKey,
-    baseURL: 'https://dashscope.aliyuncs.com/compatible-mode/v1',
+    baseURL: 'https://api.deepseek.com',
 });
 
 // ── Character Dictionary ──────────────────────────────────────────
-// dict: { char: [ { pinyin, example, ttsText, audioFile? } ] }
-// Each char maps to an array of known readings.
-// Non-polyphonic chars have exactly 1 entry; polyphonic chars have 2+.
+// dict: { char: [ { pinyin, ttsText } ] }
+// Non-polyphonic chars: 1 entry; polyphonic chars: 2+ entries.
 
 const loadDict = () => {
     if (existsSync(dictPath)) {
@@ -56,21 +53,13 @@ const buildDictFromQuestions = (questions) => {
     for (const q of questions) {
         if (!q.pronunciation) continue;
         for (const [char, info] of Object.entries(q.pronunciation)) {
-            if (!info.pinyin) continue;
+            if (!info || typeof info !== 'object' || !info.pinyin || !info.ttsText) continue;
 
-            if (!dict[char]) {
-                dict[char] = [];
-            }
+            if (!dict[char]) dict[char] = [];
 
-            // Check if this reading already exists
             const exists = dict[char].some(r => r.pinyin === info.pinyin);
             if (!exists) {
-                dict[char].push({
-                    pinyin: info.pinyin,
-                    example: info.example,
-                    ttsText: info.ttsText,
-                    ...(info.audioFile ? { audioFile: info.audioFile } : {}),
-                });
+                dict[char].push({ pinyin: info.pinyin, ttsText: info.ttsText });
                 added++;
             }
         }
@@ -83,48 +72,44 @@ const saveDict = (dict) => {
     writeFileSync(dictPath, JSON.stringify(dict, null, 2) + '\n', 'utf8');
 };
 
-const isPolyphonic = (dict, char) => {
-    return dict[char] && dict[char].length > 1;
-};
+const isPolyphonic = (dict, char) => dict[char] && dict[char].length > 1;
 
 // ── Extract Chinese characters ────────────────────────────────────
 const extractChineseChars = (text) => {
     return [...text].filter(ch => /[\u4e00-\u9fff]/.test(ch));
 };
 
-// ── Build prompt (only for unresolved chars) ──────────────────────
+// ── Build prompt ──────────────────────────────────────────────────
 const buildPrompt = (question, charsToResolve) => {
     if (charsToResolve.length === 0) return null;
 
-    return `你是一个中文发音教学助手，面向5-12岁的小朋友。
+    return `你是一个幼儿中文识字教学专家，面向5-12岁的小朋友。
 
-以下是一道脑筋急转弯题目及其选项：
 题目：${question.text}
 选项：${question.options.map(o => `${o.id}. ${o.text}`).join('；')}
 
-请为以下每个中文字，根据它在题目或选项中的语境，生成准确的读音信息：
+请为以下每个中文字生成读音信息：
 ${charsToResolve.join('、')}
 
 要求：
-1. pinyin 使用带声调的拼音（如 lì、shén、me）
-2. example 用一个小朋友容易理解的常见词来帮助记忆这个字的读音，格式为"XX的X"（如"美丽的丽"、"什么的什"）
-3. ttsText 是用于语音合成的文本，格式为"汉字，例词"（如"丽，美丽的丽"）
-4. 注意多音字要根据语境选择正确的读音
+1. pinyin：带声调拼音（如 lì、shén）
+2. ttsText：帮助孩子记住这个字的读音的短语。
+   - 格式必须严格为：\u201cX\u201d\uff1a\u201cYY\u201d的\u201cX\u201d，其中X是这个字，YY是包含这个字的常见词
+   - 例如："树"："大树"的"树"、"妈"："妈妈"的"妈"、"苹"："苹果"的"苹"
+   - 要求使用孩子日常生活中最常见、最容易理解的词语
+   - 优先选择：身体部位（眼睛的眼）、家人称呼（妈妈的妈）、日常物品（书包的书）、动物（小猫的猫）、食物（苹果的苹）、颜色（红色的红）、大自然（太阳的太）
+   - 避免使用成语、文言文、或者孩子不熟悉的词
+3. 多音字要根据题目语境选择正确读音
 
 请严格按照以下 JSON 格式返回，不要包含其他内容：
 {
-  "字1": { "pinyin": "...", "example": "...", "ttsText": "..." },
-  "字2": { "pinyin": "...", "example": "...", "ttsText": "..." }
+  "字1": { "pinyin": "...", "ttsText": "\u201c字1\u201d\uff1a\u201cXX\u201d的\u201c字1\u201d" },
+  "字2": { "pinyin": "...", "ttsText": "\u201c字2\u201d\uff1a\u201cXX\u201d的\u201c字2\u201d" }
 }`;
 };
 
 // ── Process a single question ─────────────────────────────────────
 const processQuestion = async (question, dict) => {
-    // Skip if already has pronunciation data
-    if (question.pronunciation && Object.keys(question.pronunciation).length > 0) {
-        return { status: 'skipped', reason: 'existing' };
-    }
-
     const allTexts = [question.text, ...question.options.map(o => o.text)];
     const allChars = [...new Set(allTexts.flatMap(extractChineseChars))];
 
@@ -132,40 +117,52 @@ const processQuestion = async (question, dict) => {
         return { status: 'skipped', reason: 'no Chinese chars' };
     }
 
-    // Separate chars into: resolvable from dict vs needs API
-    const resolved = {};    // char → {pinyin, example, ttsText, audioFile?}
-    const needsApi = [];    // chars that need API call
+    // Check which chars need ttsText
+    const needsTts = allChars.filter(ch => {
+        const info = question.pronunciation?.[ch];
+        return !info?.ttsText;
+    });
 
-    for (const char of allChars) {
+    if (needsTts.length === 0) {
+        return { status: 'skipped', reason: 'all have ttsText' };
+    }
+
+    // Separate: dict-resolvable vs needs API
+    const resolved = {};
+    const needsApi = [];
+
+    for (const char of needsTts) {
         if (!dict[char]) {
-            // Unknown character — must ask API
             needsApi.push(char);
         } else if (isPolyphonic(dict, char)) {
-            // Polyphonic — must ask API for context-dependent reading
             needsApi.push(char);
         } else {
-            // Single reading — reuse from dict
             resolved[char] = { ...dict[char][0] };
         }
     }
 
-    // If all chars resolved from dict, no API call needed!
+    // Merge resolved into existing pronunciation
+    if (!question.pronunciation) question.pronunciation = {};
+    for (const [char, data] of Object.entries(resolved)) {
+        question.pronunciation[char] = { ...question.pronunciation[char], ...data };
+    }
+
+    // If all resolved from dict, done
     if (needsApi.length === 0) {
-        question.pronunciation = resolved;
         return {
             status: 'dict',
-            charCount: allChars.length,
-            dictHits: allChars.length,
+            charCount: needsTts.length,
+            dictHits: needsTts.length,
             apiChars: 0,
         };
     }
 
-    // Call API only for unresolved chars
+    // Call DeepSeek API
     const prompt = buildPrompt(question, needsApi);
 
     try {
         const response = await client.chat.completions.create({
-            model: 'qwen-plus',
+            model: 'deepseek-chat',
             messages: [{ role: 'user', content: prompt }],
             temperature: 0.1,
             response_format: { type: 'json_object' },
@@ -174,38 +171,32 @@ const processQuestion = async (question, dict) => {
         const content = response.choices[0].message.content;
         const apiResult = JSON.parse(content);
 
-        // Merge: dict-resolved + API results
-        const pronunciation = { ...resolved };
         for (const char of needsApi) {
             if (apiResult[char]) {
-                pronunciation[char] = apiResult[char];
+                question.pronunciation[char] = {
+                    ...question.pronunciation[char],
+                    ...apiResult[char],
+                };
 
-                // Update dictionary with new reading
+                // Update dictionary
                 if (!dict[char]) dict[char] = [];
                 const exists = dict[char].some(r => r.pinyin === apiResult[char].pinyin);
                 if (!exists) {
                     dict[char].push({
                         pinyin: apiResult[char].pinyin,
-                        example: apiResult[char].example,
                         ttsText: apiResult[char].ttsText,
                     });
                 }
             }
         }
 
-        question.pronunciation = pronunciation;
-
         return {
             status: 'ok',
-            charCount: Object.keys(pronunciation).length,
+            charCount: needsTts.length,
             dictHits: Object.keys(resolved).length,
             apiChars: needsApi.length,
         };
     } catch (err) {
-        // On error, still save whatever we resolved from dict
-        if (Object.keys(resolved).length > 0) {
-            question.pronunciation = resolved;
-        }
         return { status: 'error', message: err.message };
     }
 };
@@ -246,19 +237,22 @@ const main = async () => {
     const totalCharsInDict = Object.keys(dict).length;
     const polyphonicCount = Object.values(dict).filter(r => r.length > 1).length;
 
-    // Identify questions that need processing
-    const needsProcessing = questions.filter(
-        q => !q.pronunciation || Object.keys(q.pronunciation).length === 0
-    );
+    // Identify questions that need ttsText
+    const needsProcessing = questions.filter(q => {
+        if (!q.pronunciation) return true;
+        return Object.values(q.pronunciation).some(
+            info => info && typeof info === 'object' && !info.ttsText
+        );
+    });
 
     console.log(`📖 Dictionary: ${totalCharsInDict} unique chars (${polyphonicCount} polyphonic)`);
     console.log(`📝 Total questions: ${questions.length}`);
-    console.log(`🆕 Need pronunciation: ${needsProcessing.length}`);
+    console.log(`🆕 Need ttsText: ${needsProcessing.length}`);
     console.log(`⚡ Concurrency: ${CONCURRENCY}\n`);
 
     if (needsProcessing.length === 0) {
         saveDict(dict);
-        console.log('All questions already have pronunciation data. Dictionary saved.');
+        console.log('All questions already have ttsText. Dictionary saved.');
         return;
     }
 
@@ -269,9 +263,9 @@ const main = async () => {
 
         logCounter++;
         if (result.status === 'ok') {
-            console.log(`  [${logCounter}/${questions.length}] #${q.id} — OK (${result.charCount} chars: ${result.dictHits} cached, ${result.apiChars} from API)`);
+            console.log(`  [${logCounter}/${questions.length}] #${q.id} — OK (${result.dictHits} cached + ${result.apiChars} API)`);
         } else if (result.status === 'dict') {
-            console.log(`  [${logCounter}/${questions.length}] #${q.id} — ✨ All from dict (${result.charCount} chars, 0 API calls)`);
+            console.log(`  [${logCounter}/${questions.length}] #${q.id} — ✨ All from dict (${result.charCount} chars)`);
         } else if (result.status === 'error') {
             console.error(`  [${logCounter}/${questions.length}] #${q.id} — ERROR: ${result.message}`);
         }
@@ -294,8 +288,7 @@ const main = async () => {
 
     // Summary
     const counts = { ok: 0, dict: 0, skipped: 0, error: 0 };
-    let totalDictHits = 0;
-    let totalApiChars = 0;
+    let totalDictHits = 0, totalApiChars = 0;
     for (const r of results) {
         counts[r.status]++;
         if (r.dictHits) totalDictHits += r.dictHits;
@@ -303,12 +296,11 @@ const main = async () => {
     }
 
     console.log(`\nDone!`);
-    console.log(`  From API: ${counts.ok} questions (${totalApiChars} chars sent to API)`);
-    console.log(`  From dict (0 API calls): ${counts.dict} questions`);
+    console.log(`  From API: ${counts.ok} questions (${totalApiChars} chars)`);
+    console.log(`  From dict: ${counts.dict} questions (${totalDictHits} chars)`);
     console.log(`  Skipped: ${counts.skipped}`);
     console.log(`  Errors: ${counts.error}`);
-    console.log(`  Dict cache hits: ${totalDictHits} chars`);
-    console.log(`  Dictionary size: ${Object.keys(dict).length} chars (${Object.values(dict).filter(r => r.length > 1).length} polyphonic)`);
+    console.log(`  Dictionary: ${Object.keys(dict).length} chars (${Object.values(dict).filter(r => r.length > 1).length} polyphonic)`);
 };
 
 main().catch(err => {

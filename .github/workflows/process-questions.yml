@@ -2,7 +2,7 @@ name: Process Incremental Questions
 
 on:
   push:
-    branches: [ main ]
+    branches: [ master ]
     paths:
       - 'src/data/questions.json'
   workflow_dispatch:
@@ -64,7 +64,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add src/data/questions.json public/audio/
+          git add src/data/questions.json docs/audio/
           # Only commit if there are actual changes
           if git diff --cached --quiet; then
             echo "No changes to commit."

@@ -20,7 +20,7 @@ function shuffleArray(arr) {
 }
 
 // Use local public asset
-const mascotImg = '/mascot.png';
+const mascotImg = `${import.meta.env.BASE_URL}mascot.png`;
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);

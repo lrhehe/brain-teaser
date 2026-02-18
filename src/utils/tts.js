@@ -25,7 +25,7 @@ export const speakChar = (audioFile) => {
         window.speechSynthesis.cancel();
     }
 
-    const audio = new Audio(`/audio/${audioFile}`);
+    const audio = new Audio(`${import.meta.env.BASE_URL}audio/${audioFile}`);
     currentAudio = audio;
     audio.play().catch(() => { });
 };

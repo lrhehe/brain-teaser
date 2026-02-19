@@ -4,28 +4,18 @@ import { speakChar } from '../utils/tts';
 
 export default function QuestionCard({ question }) {
     const pronunciation = question.pronunciation || {};
-    const [activeChar, setActiveChar] = useState(null);
+    const [activeIndex, setActiveIndex] = useState(null);
 
-    const handleCharClick = (char) => {
+    const handleCharClick = (char, index) => {
         if (!char.trim()) return;
         const info = pronunciation[char];
         if (info?.audioFile) {
-            setActiveChar(char);
-            const audio = speakChar(info.audioFile);
-            if (audio) {
-                audio.onended = () => setActiveChar(null);
-                // Fallback: clear after 3s in case onended doesn't fire
-                setTimeout(() => setActiveChar(null), 3000);
-            }
+            setActiveIndex(index);
+            speakChar(info.audioFile);
         }
     };
 
-    // Build ruby pairs from pronunciation data
     const chars = [...question.text];
-    const rubyPairs = chars.map(char => {
-        const info = pronunciation[char];
-        return [char, info?.pinyin || ''];
-    });
 
     return (
         <motion.div
@@ -38,11 +28,11 @@ export default function QuestionCard({ question }) {
             <div className="absolute bottom-0 right-0 w-32 h-32 md:w-48 md:h-48 bg-indigo-200/20 blur-2xl md:blur-3xl translate-x-1/2 translate-y-1/2 overflow-hidden pointer-events-none" />
 
             <div className="relative z-10 flex flex-wrap justify-center items-end gap-x-1 gap-y-6 md:gap-y-10">
-                {rubyPairs.map(([char, pin], index) => {
-                    const isActive = activeChar === char;
+                {chars.map((char, index) => {
+                    const isActive = activeIndex === index;
                     const hasAudio = !!pronunciation[char]?.audioFile;
                     return (
-                        <motion.ruby
+                        <motion.span
                             key={index}
                             animate={isActive ? {
                                 scale: 1.4,
@@ -58,19 +48,13 @@ export default function QuestionCard({ question }) {
                             transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                             onClick={(e) => {
                                 e.stopPropagation();
-                                handleCharClick(char);
+                                handleCharClick(char, index);
                             }}
-                            className={`text-2xl md:text-5xl font-[800] cursor-pointer select-none leading-none relative
+                            className={`text-2xl md:text-5xl font-[800] cursor-pointer select-none leading-none relative inline-block
                                 ${isActive ? 'z-20' : 'z-10'}
                                 ${hasAudio ? '' : 'cursor-default'}`}
                         >
                             {char}
-                            {pin && (
-                                <rt className={`text-[10px] md:text-sm font-medium mb-1 md:mb-2 transition-colors duration-200
-                                    ${isActive ? 'text-indigo-600 font-bold' : 'text-indigo-500'}`}>
-                                    {pin}
-                                </rt>
-                            )}
                             {/* Active indicator dot */}
                             {isActive && (
                                 <motion.span
@@ -80,7 +64,7 @@ export default function QuestionCard({ question }) {
                                     className="absolute -bottom-3 left-1/2 -translate-x-1/2 w-1.5 h-1.5 md:w-2 md:h-2 bg-indigo-500 rounded-full"
                                 />
                             )}
-                        </motion.ruby>
+                        </motion.span>
                     );
                 })}
             </div>

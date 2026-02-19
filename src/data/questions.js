@@ -1,6 +1,27 @@
 import questionsData from './questions.json';
+import pronunciationDict from './pronunciation_dict.json';
 
-export const questions = questionsData;
+// Build pronunciation for each question at runtime from the shared dictionary,
+// with per-question overrides for polyphonic characters (多音字)
+export const questions = questionsData.map(q => {
+  const allChars = new Set([
+    ...q.text,
+    ...q.options.map(o => o.text).join('')
+  ]);
+
+  const pronunciation = {};
+  for (const ch of allChars) {
+    // Per-question override takes priority over shared dict
+    if (q.pronunciation?.[ch]) {
+      pronunciation[ch] = q.pronunciation[ch];
+    } else if (pronunciationDict[ch]) {
+      pronunciation[ch] = pronunciationDict[ch];
+    }
+  }
+
+  const { pronunciation: _, ...rest } = q;
+  return { ...rest, pronunciation };
+});
 
 export const feedbackPhrases = {
   correct: [

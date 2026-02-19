@@ -4,20 +4,15 @@ import { speakChar } from '../utils/tts';
 export default function AnswerButton({ answer, pronunciation, onClick, isSelected, disabled }) {
     const handleCharClick = (e, char) => {
         e.stopPropagation();
-        e.preventDefault();
         if (!char.trim()) return;
         const info = pronunciation?.[char];
         if (info?.audioFile) {
             speakChar(info.audioFile);
         }
+        // Also select this option
+        onClick(answer);
     };
 
-    // Build ruby pairs from pronunciation data
-    const chars = [...answer.text];
-    const rubyPairs = chars.map(char => {
-        const info = pronunciation?.[char];
-        return [char, info?.pinyin || ''];
-    });
 
     return (
         <motion.div
@@ -40,10 +35,9 @@ export default function AnswerButton({ answer, pronunciation, onClick, isSelecte
         >
             <div className={`absolute inset-0 transition-opacity ${isSelected ? 'bg-gradient-to-br from-white/10 to-transparent opacity-100' : 'bg-gradient-to-br from-white/40 to-transparent opacity-0 group-hover:opacity-100'}`} />
 
-            {/* Clickable Ruby characters — each char triggers its own TTS */}
-            <div className="flex flex-wrap justify-center items-end gap-x-1 gap-y-4 relative z-10">
-                {rubyPairs.map(([char, pin], index) => (
-                    <ruby
+            <div className="flex flex-wrap justify-center items-end gap-x-1 gap-y-2 relative z-10">
+                {[...answer.text].map((char, index) => (
+                    <span
                         key={index}
                         onClick={(e) => handleCharClick(e, char)}
                         className={`text-2xl md:text-4xl font-bold leading-none cursor-pointer active:scale-90 transition-all
@@ -52,8 +46,7 @@ export default function AnswerButton({ answer, pronunciation, onClick, isSelecte
                                 : 'text-gray-800 hover:text-indigo-500'}`}
                     >
                         {char}
-                        {pin && <rt className={`text-xs md:text-sm font-medium mb-0.5 ${isSelected ? 'text-indigo-200' : 'text-indigo-400'}`}>{pin}</rt>}
-                    </ruby>
+                    </span>
                 ))}
             </div>
 

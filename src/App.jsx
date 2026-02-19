@@ -1,7 +1,7 @@
 import { useState, useMemo } from 'react';
 import confetti from 'canvas-confetti';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, RotateCcw, Award, Sparkles, Send } from 'lucide-react';
+import { Star, RotateCcw, Award, Sparkles, Send, ArrowRight } from 'lucide-react';
 import QuestionCard from './components/QuestionCard';
 import AnswerButton from './components/AnswerButton';
 import ProgressBar from './components/ProgressBar';
@@ -66,25 +66,31 @@ function App() {
         colors: ['#818cf8', '#c084fc', '#fb7185', '#fbbf24']
       });
       speakFeedback(phrase);
+
+      // Auto-advance after correct answer
+      setTimeout(() => {
+        goToNext();
+      }, 2500);
     } else {
       setFeedback('incorrect');
       const phrase = getRandomPhrase('incorrect');
       setFeedbackText(phrase);
       speakFeedback(phrase);
+      // Stay on current question — user clicks "下一题" to advance
     }
+  };
 
-    setTimeout(() => {
-      if (currentQuestionIndex < gameQuestions.length - 1) {
-        setCurrentQuestionIndex(currentQuestionIndex + 1);
-        setIsAnswered(false);
-        setFeedback(null);
-        setFeedbackText('');
-        setSelectedOption(null);
-      } else {
-        setGameState('result');
-        speakFeedback(getRandomPhrase('complete'));
-      }
-    }, 2500);
+  const goToNext = () => {
+    if (currentQuestionIndex < gameQuestions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setIsAnswered(false);
+      setFeedback(null);
+      setFeedbackText('');
+      setSelectedOption(null);
+    } else {
+      setGameState('result');
+      speakFeedback(getRandomPhrase('complete'));
+    }
   };
 
   const startGame = () => {
@@ -142,7 +148,7 @@ function App() {
             transition={{ delay: 0.2 }}
             className="text-4xl md:text-5xl font-black text-gray-800 mb-2 tracking-tight"
           >
-            智慧对对碰
+            脑筋急转弯
           </motion.h1>
           <motion.p
             initial={{ y: 20, opacity: 0 }}
@@ -254,7 +260,7 @@ function App() {
             <img src={mascotImg} alt="Mascot" className="w-12 h-12 md:w-20 md:h-20 object-contain" />
           </motion.div>
           <div>
-            <h1 className="text-2xl md:text-4xl font-black text-gray-800 tracking-tighter">智慧对对碰</h1>
+            <h1 className="text-2xl md:text-4xl font-black text-gray-800 tracking-tighter">脑筋急转弯</h1>
             <p className="text-indigo-400 font-bold text-[10px] md:text-sm tracking-widest uppercase">Brain Teaser Adventure</p>
           </div>
         </div>
@@ -294,29 +300,43 @@ function App() {
               ))}
             </div>
 
-            {/* Submit Button */}
+            {/* Submit / Next Button */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="mt-8 md:mt-12 flex justify-center"
             >
-              <motion.button
-                whileHover={selectedOption && !isAnswered ? { scale: 1.05 } : {}}
-                whileTap={selectedOption && !isAnswered ? { scale: 0.95 } : {}}
-                onClick={handleSubmit}
-                disabled={!selectedOption || isAnswered}
-                className={`
-                  flex items-center justify-center gap-3 
-                  text-xl md:text-2xl font-black py-4 md:py-5 px-10 md:px-16 
-                  rounded-full md:rounded-[2rem] shadow-xl transition-all duration-300
-                  ${selectedOption && !isAnswered
-                    ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white cursor-pointer hover:shadow-2xl hover:shadow-indigo-300/40'
-                    : 'bg-gray-200 text-gray-400 cursor-not-allowed'}
-                `}
-              >
-                <Send className="w-5 h-5 md:w-7 md:h-7" />
-                提交答案
-              </motion.button>
+              {feedback === 'incorrect' ? (
+                <motion.button
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={goToNext}
+                  className="flex items-center justify-center gap-3 text-xl md:text-2xl font-black py-4 md:py-5 px-10 md:px-16 rounded-full md:rounded-[2rem] shadow-xl bg-gradient-to-r from-amber-400 to-orange-500 text-white cursor-pointer hover:shadow-2xl hover:shadow-orange-300/40 transition-all duration-300"
+                >
+                  下一题
+                  <ArrowRight className="w-5 h-5 md:w-7 md:h-7" />
+                </motion.button>
+              ) : (
+                <motion.button
+                  whileHover={selectedOption && !isAnswered ? { scale: 1.05 } : {}}
+                  whileTap={selectedOption && !isAnswered ? { scale: 0.95 } : {}}
+                  onClick={handleSubmit}
+                  disabled={!selectedOption || isAnswered}
+                  className={`
+                    flex items-center justify-center gap-3 
+                    text-xl md:text-2xl font-black py-4 md:py-5 px-10 md:px-16 
+                    rounded-full md:rounded-[2rem] shadow-xl transition-all duration-300
+                    ${selectedOption && !isAnswered
+                      ? 'bg-gradient-to-r from-indigo-500 to-purple-600 text-white cursor-pointer hover:shadow-2xl hover:shadow-indigo-300/40'
+                      : 'bg-gray-200 text-gray-400 cursor-not-allowed'}
+                  `}
+                >
+                  <Send className="w-5 h-5 md:w-7 md:h-7" />
+                  提交答案
+                </motion.button>
+              )}
             </motion.div>
           </motion.div>
         </AnimatePresence>

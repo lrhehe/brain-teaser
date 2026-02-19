@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>题目审核后台</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f1f5f9; color: #1e293b; }
+
+  .toolbar {
+    position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid #e2e8f0;
+    padding: 12px 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+    box-shadow: 0 1px 3px rgba(0,0,0,.08);
+  }
+  .toolbar h1 { font-size: 18px; font-weight: 700; }
+  .toolbar .stats { font-size: 13px; color: #64748b; }
+  .toolbar .stats b { color: #1e293b; }
+  .toolbar .spacer { flex: 1; }
+  .toolbar select, .toolbar input { padding: 6px 10px; border: 1px solid #cbd5e1; border-radius: 6px; font-size: 13px; }
+  .toolbar input[type=text] { width: 200px; }
+
+  .btn { padding: 8px 16px; border: none; border-radius: 8px; font-size: 13px; font-weight: 600; cursor: pointer; transition: .15s; }
+  .btn-primary { background: #4f46e5; color: #fff; }
+  .btn-primary:hover { background: #4338ca; }
+  .btn-danger { background: #ef4444; color: #fff; }
+  .btn-danger:hover { background: #dc2626; }
+  .btn-success { background: #22c55e; color: #fff; }
+  .btn-success:hover { background: #16a34a; }
+  .btn-outline { background: #fff; color: #475569; border: 1px solid #cbd5e1; }
+  .btn-outline:hover { background: #f8fafc; }
+
+  .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+
+  .card {
+    background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 12px;
+    border: 2px solid transparent; transition: .2s; position: relative;
+  }
+  .card.rejected { border-color: #fca5a5; background: #fef2f2; opacity: .6; }
+  .card.kept { border-color: #86efac; background: #f0fdf4; }
+  .card:hover { box-shadow: 0 2px 8px rgba(0,0,0,.08); }
+
+  .card .qid { font-size: 12px; color: #94a3b8; font-weight: 600; position: absolute; top: 12px; right: 16px; }
+  .card .question { font-size: 18px; font-weight: 700; margin-bottom: 12px; line-height: 1.5; }
+  .card .options { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px; }
+  .card .opt {
+    padding: 6px 14px; background: #f1f5f9; border-radius: 8px; font-size: 14px;
+    border: 1px solid #e2e8f0;
+  }
+  .card .opt.correct { background: #dcfce7; border-color: #86efac; font-weight: 600; }
+  .card .actions { display: flex; gap: 8px; }
+
+  .empty { text-align: center; color: #94a3b8; padding: 60px 0; font-size: 16px; }
+
+  .file-input-area {
+    text-align: center; padding: 80px 24px; background: #fff; border-radius: 16px;
+    border: 2px dashed #cbd5e1; margin-top: 40px; cursor: pointer;
+  }
+  .file-input-area:hover { border-color: #4f46e5; background: #f8fafc; }
+  .file-input-area h2 { font-size: 20px; margin-bottom: 8px; }
+  .file-input-area p { color: #64748b; font-size: 14px; }
+</style>
+</head>
+<body>
+
+<div id="app"></div>
+
+<script>
+const app = document.getElementById('app');
+let questions = [];
+let decisions = {}; // id -> 'keep' | 'reject' | undefined
+let filter = 'all'; // all | pending | kept | rejected
+let search = '';
+
+function loadFromStorage() {
+  try {
+    const saved = localStorage.getItem('review_decisions');
+    if (saved) decisions = JSON.parse(saved);
+  } catch(e) {}
+}
+function saveToStorage() {
+  localStorage.setItem('review_decisions', JSON.stringify(decisions));
+}
+
+function getStats() {
+  const total = questions.length;
+  const kept = Object.values(decisions).filter(d => d === 'keep').length;
+  const rejected = Object.values(decisions).filter(d => d === 'reject').length;
+  const pending = total - kept - rejected;
+  return { total, kept, rejected, pending };
+}
+
+function getFiltered() {
+  let list = questions;
+  if (filter === 'pending') list = list.filter(q => !decisions[q.id]);
+  else if (filter === 'kept') list = list.filter(q => decisions[q.id] === 'keep');
+  else if (filter === 'rejected') list = list.filter(q => decisions[q.id] === 'reject');
+
+  if (search.trim()) {
+    const s = search.trim().toLowerCase();
+    list = list.filter(q =>
+      q.text.toLowerCase().includes(s) ||
+      q.options.some(o => o.text.toLowerCase().includes(s)) ||
+      String(q.id) === s
+    );
+  }
+  return list;
+}
+
+function render() {
+  if (questions.length === 0) {
+    app.innerHTML = `
+      <div class="container">
+        <div class="file-input-area" onclick="document.getElementById('file-input').click()">
+          <h2>📂 加载 questions.json</h2>
+          <p>点击选择文件或拖拽到此处</p>
+          <input type="file" id="file-input" accept=".json" style="display:none" onchange="handleFile(event)">
+        </div>
+      </div>`;
+    return;
+  }
+
+  const s = getStats();
+  const filtered = getFiltered();
+
+  app.innerHTML = `
+    <div class="toolbar">
+      <h1>📋 题目审核</h1>
+      <div class="stats">
+        共 <b>${s.total}</b> 题 ·
+        ✅ <b style="color:#16a34a">${s.kept}</b> ·
+        ❌ <b style="color:#ef4444">${s.rejected}</b> ·
+        ⏳ <b>${s.pending}</b>
+      </div>
+      <div class="spacer"></div>
+      <input type="text" placeholder="搜索题目..." value="${search}" oninput="search=this.value;render()">
+      <select onchange="filter=this.value;render()">
+        <option value="all" ${filter==='all'?'selected':''}>全部 (${s.total})</option>
+        <option value="pending" ${filter==='pending'?'selected':''}>待审核 (${s.pending})</option>
+        <option value="kept" ${filter==='kept'?'selected':''}>已保留 (${s.kept})</option>
+        <option value="rejected" ${filter==='rejected'?'selected':''}>已淘汰 (${s.rejected})</option>
+      </select>
+      <button class="btn btn-success" onclick="exportKept()">导出保留题目</button>
+      <button class="btn btn-outline" onclick="exportDecisions()">导出审核记录</button>
+    </div>
+    <div class="container" id="list"></div>
+  `;
+
+  const list = document.getElementById('list');
+  if (filtered.length === 0) {
+    list.innerHTML = '<div class="empty">没有匹配的题目</div>';
+    return;
+  }
+
+  list.innerHTML = filtered.map(q => {
+    const d = decisions[q.id];
+    const cls = d === 'reject' ? 'rejected' : d === 'keep' ? 'kept' : '';
+    return `
+      <div class="card ${cls}">
+        <div class="qid">#${q.id}</div>
+        <div class="question">${q.text}</div>
+        <div class="options">
+          ${q.options.map(o => `<span class="opt ${o.isCorrect ? 'correct' : ''}">${o.isCorrect ? '✅ ' : ''}${o.text}</span>`).join('')}
+        </div>
+        <div class="actions">
+          <button class="btn ${d==='keep'?'btn-success':'btn-outline'}" onclick="decide(${q.id},'keep')">
+            ${d==='keep' ? '✅ 已保留' : '👍 保留'}
+          </button>
+          <button class="btn ${d==='reject'?'btn-danger':'btn-outline'}" onclick="decide(${q.id},'reject')">
+            ${d==='reject' ? '❌ 已淘汰' : '👎 淘汰'}
+          </button>
+          ${d ? `<button class="btn btn-outline" onclick="decide(${q.id},null)">↩ 撤销</button>` : ''}
+        </div>
+      </div>`;
+  }).join('');
+}
+
+function handleFile(e) {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = (ev) => {
+    try {
+      questions = JSON.parse(ev.target.result);
+      loadFromStorage();
+      render();
+    } catch(err) {
+      alert('JSON 解析失败: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+}
+
+function decide(id, d) {
+  if (d === null) delete decisions[id];
+  else decisions[id] = d;
+  saveToStorage();
+  render();
+}
+
+function exportKept() {
+  const kept = questions.filter(q => decisions[q.id] !== 'reject');
+  // Renumber IDs
+  const result = kept.map((q, i) => ({ ...q, id: i + 1 }));
+  downloadJSON(result, 'questions_filtered.json');
+}
+
+function exportDecisions() {
+  const result = {};
+  for (const q of questions) {
+    if (decisions[q.id]) result[q.id] = { decision: decisions[q.id], text: q.text };
+  }
+  downloadJSON(result, 'review_decisions.json');
+}
+
+function downloadJSON(data, filename) {
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = filename; a.click();
+  URL.revokeObjectURL(url);
+}
+
+// Init
+render();
+</script>
+</body>
+</html>

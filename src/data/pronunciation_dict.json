@@ -835,10 +835,6 @@
     "ttsText": "“奶”：“牛奶”的“奶”",
     "audioFile": "ae81fd4871d3.mp3"
   },
-  "汤": {
-    "ttsText": "“汤”：“鱼汤”的“汤”",
-    "audioFile": "ff0a60f5d460.mp3"
-  },
   "能": {
     "ttsText": "“能”：“能够”的“能”",
     "audioFile": "f6a4f4381f04.mp3"
@@ -850,14 +846,6 @@
   "鱼": {
     "ttsText": "“鱼”：“小鱼”的“鱼”",
     "audioFile": "19948f5873b7.mp3"
-  },
-  "赴": {
-    "ttsText": "“赴”：“赴汤蹈火”的“赴”",
-    "audioFile": "223c3bf99ffc.mp3"
-  },
-  "蹈": {
-    "ttsText": "“蹈”：“赴汤蹈火”的“蹈”",
-    "audioFile": "a22ae6210f80.mp3"
   },
   "鸡": {
     "ttsText": "“鸡”：“小鸡”的“鸡”",
@@ -1087,25 +1075,13 @@
     "ttsText": "“易”：“容易”的“易”",
     "audioFile": "4644993fb5a7.mp3"
   },
-  "翼": {
-    "ttsText": "“翼”：“翅膀”的“翼”",
-    "audioFile": "ed175e32fe60.mp3"
-  },
   "而": {
     "ttsText": "“而”：“而且”的“而”",
     "audioFile": "63e684f1c0eb.mp3"
   },
-  "钞": {
-    "ttsText": "“钞”：“钞票”的“钞”",
-    "audioFile": "dc5f82a810dd.mp3"
-  },
   "票": {
     "ttsText": "“票”：“车票”的“票”",
     "audioFile": "f65c7c11f150.mp3"
-  },
-  "卫": {
-    "ttsText": "“卫”：“卫生”的“卫”",
-    "audioFile": "53bbc46ebe1e.mp3"
   },
   "星": {
     "ttsText": "“星”：“星星”的“星”",
@@ -1439,10 +1415,6 @@
     "ttsText": "“犀”：“犀牛”的“犀”",
     "audioFile": "f25c93cec6af.mp3"
   },
-  "恐": {
-    "ttsText": "“恐”：“害怕”的“恐”",
-    "audioFile": "6d1741b0a1d8.mp3"
-  },
   "龙": {
     "ttsText": "“龙”：“恐龙”的“龙”",
     "audioFile": "43fb89d5b4df.mp3"
@@ -1451,10 +1423,6 @@
     "ttsText": "“灭”：“灭火”的“灭”",
     "audioFile": "df9b76f2f383.mp3"
   },
-  "亡": {
-    "ttsText": "“亡”：“死亡”的“亡”",
-    "audioFile": "aef769d7a7a5.mp3"
-  },
   "变": {
     "ttsText": "“变”：“变化”的“变”",
     "audioFile": "6ae3fedcb9ca.mp3"
@@ -1462,10 +1430,6 @@
   "化": {
     "ttsText": "“化”：“变化”的“化”",
     "audioFile": "3ae05321713e.mp3"
-  },
-  "协": {
-    "ttsText": "“协”：“协会”的“协”",
-    "audioFile": "967d33767773.mp3"
   },
   "行": {
     "ttsText": "“行”：“行星”的“行”",
@@ -1546,14 +1510,6 @@
   "失": {
     "ttsText": "“失”：“丢失”的“失”",
     "audioFile": "528fc1e1e09d.mp3"
-  },
-  "骆": {
-    "ttsText": "“骆”：“骆驼”的“骆”",
-    "audioFile": "8b39b6bfe2b9.mp3"
-  },
-  "驼": {
-    "ttsText": "“驼”：“骆驼”的“驼”",
-    "audioFile": "9d66550451c5.mp3"
   },
   "宝": {
     "ttsText": "“宝”：“宝宝”的“宝”",
@@ -1787,7 +1743,6 @@
     "ttsText": "“给”：“给你”的“给”",
     "audioFile": "87f3765893d8.mp3"
   },
-  "ttsText": {},
   "横": {
     "ttsText": "“横”：“横线”的“横”",
     "audioFile": "47939da89304.mp3"
@@ -1828,18 +1783,6 @@
     "ttsText": "“努”：“努力”的“努”",
     "audioFile": "5405391cf632.mp3"
   },
-  "贝": {
-    "ttsText": "“贝”：“贝壳”的“贝”",
-    "audioFile": "f9479c5c7f54.mp3"
-  },
-  "芬": {
-    "ttsText": "“芬”：“芬芳”的“芬”",
-    "audioFile": "e27814c127ea.mp3"
-  },
-  "启": {
-    "ttsText": "“启”：“启发”的“启”",
-    "audioFile": "0bf1896fcfd7.mp3"
-  },
   "示": {
     "ttsText": "“示”：“表示”的“示”",
     "audioFile": "b8c1904579f4.mp3"
@@ -1875,10 +1818,6 @@
   "放": {
     "ttsText": "“放”：“放学”的“放”",
     "audioFile": "e00c5c51afba.mp3"
-  },
-  "弃": {
-    "ttsText": "“弃”：“放弃”的“弃”",
-    "audioFile": "3978e885d70a.mp3"
   },
   "经": {
     "ttsText": "“经”：“经常”的“经”",
@@ -2012,26 +1951,6 @@
     "ttsText": "“备”：“准备”的“备”",
     "audioFile": "0cd38eb68b78.mp3"
   },
-  "顾": {
-    "ttsText": "“顾”：“照顾”的“顾”",
-    "audioFile": "a657c5706229.mp3"
-  },
-  "茅": {
-    "ttsText": "“茅”：“茅草”的“茅”",
-    "audioFile": "b1df1af2a5fd.mp3"
-  },
-  "庐": {
-    "ttsText": "“庐”：“茅庐”的“庐”",
-    "audioFile": "fcfcaa7a0696.mp3"
-  },
-  "诸": {
-    "ttsText": "“诸”：“诸葛”的“诸”",
-    "audioFile": "769f94536c33.mp3"
-  },
-  "葛": {
-    "ttsText": "“葛”：“诸葛”的“葛”",
-    "audioFile": "62ba53033523.mp3"
-  },
   "肯": {
     "ttsText": "“肯”：“肯定”的“肯”",
     "audioFile": "e1b29ce17abb.mp3"
@@ -2047,14 +1966,6 @@
   "礼": {
     "ttsText": "“礼”：“礼貌”的“礼”",
     "audioFile": "2f3bbf709615.mp3"
-  },
-  "验": {
-    "ttsText": "“验”：“检验”的“验”",
-    "audioFile": "2337fee663d8.mp3"
-  },
-  "诚": {
-    "ttsText": "“诚”：“诚实”的“诚”",
-    "audioFile": "2407f0ab3ddc.mp3"
   },
   "意": {
     "ttsText": "“意”：“意思”的“意”",
@@ -2136,17 +2047,9 @@
     "ttsText": "“续”：“连续”的“续”",
     "audioFile": "4dfca6112a62.mp3"
   },
-  "摇": {
-    "ttsText": "“摇”：“摇头”的“摇”",
-    "audioFile": "56376dbda131.mp3"
-  },
   "风": {
     "ttsText": "“风”：“风扇”的“风”",
     "audioFile": "ee1347800301.mp3"
-  },
-  "娃": {
-    "ttsText": "“娃”：“娃娃”的“娃”",
-    "audioFile": "916e3690ba51.mp3"
   },
   "除": {
     "ttsText": "“除”：“除草”的“除”",
@@ -2172,25 +2075,13 @@
     "ttsText": "“员”：“队员”的“员”",
     "audioFile": "0bb56a4c1542.mp3"
   },
-  "泰": {
-    "ttsText": "“泰”：“泰山”的“泰”",
-    "audioFile": "0749cada584e.mp3"
-  },
   "山": {
     "ttsText": "“山”：“大山”的“山”",
     "audioFile": "f34b3c016eb3.mp3"
   },
-  "猿": {
-    "ttsText": "“猿”：“人猿”的“猿”",
-    "audioFile": "4d6401a85bf3.mp3"
-  },
   "养": {
     "ttsText": "“养”：“养大”的“养”",
     "audioFile": "d4c297cc94e0.mp3"
-  },
-  "侠": {
-    "ttsText": "“侠”：“蝙蝠侠”的“侠”",
-    "audioFile": "3e9c7ffa13df.mp3"
   },
   "爸": {
     "ttsText": "“爸”：“爸爸”的“爸”",
@@ -2256,10 +2147,6 @@
     "ttsText": "“草”：“小草”的“草”",
     "audioFile": "3ca6125f27ed.mp3"
   },
-  "命": {
-    "ttsText": "“命”：“生命”的“命”",
-    "audioFile": "b5ab494a3924.mp3"
-  },
   "强": {
     "ttsText": "“强”：“强壮”的“强”",
     "audioFile": "505b553202db.mp3"
@@ -2288,14 +2175,6 @@
     "ttsText": "“蚁”：“蚂蚁”的“蚁”",
     "audioFile": "990316a0968d.mp3"
   },
-  "蜜": {
-    "ttsText": "“蜜”：“蜂蜜”的“蜜”",
-    "audioFile": "99ac7fd1b37a.mp3"
-  },
-  "蜂": {
-    "ttsText": "“蜂”：“蜜蜂”的“蜂”",
-    "audioFile": "8e51e1be3b5c.mp3"
-  },
   "蜈": {
     "ttsText": "“蜈”：“蜈蚣”的“蜈”",
     "audioFile": "88fb8ade7287.mp3"
@@ -2303,10 +2182,6 @@
   "蚣": {
     "ttsText": "“蚣”：“蜈蚣”的“蚣”",
     "audioFile": "8745f76c4b27.mp3"
-  },
-  "昆": {
-    "ttsText": "“昆”：“昆虫”的“昆”",
-    "audioFile": "3322dffe80d0.mp3"
   },
   "虫": {
     "ttsText": "“虫”：“昆虫”的“虫”",
@@ -2327,10 +2202,6 @@
   "受": {
     "ttsText": "“受”：“接受”的“受”",
     "audioFile": "5e58be1b5e30.mp3"
-  },
-  "禄": {
-    "ttsText": "“禄”：“俸禄”的“禄”",
-    "audioFile": "01bb0637313f.mp3"
   },
   "竹": {
     "ttsText": "“竹”：“竹子”的“竹”",
@@ -2368,10 +2239,6 @@
     "ttsText": "“辞”：“辞海”的“辞”",
     "audioFile": "c6ded246c3da.mp3"
   },
-  "耐": {
-    "ttsText": "“耐”：“耐心”的“耐”",
-    "audioFile": "fe3ed13636ca.mp3"
-  },
   "皮": {
     "ttsText": "“皮”：“皮肤”的“皮”",
     "audioFile": "2a31d72de8db.mp3"
@@ -2388,10 +2255,6 @@
     "ttsText": "“汽”：“汽车”的“汽”",
     "audioFile": "d010c6112bac.mp3"
   },
-  "弯": {
-    "ttsText": "“弯”：“转弯”的“弯”",
-    "audioFile": "71a339b0d505.mp3"
-  },
   "轮": {
     "ttsText": "“轮”：“车轮”的“轮”",
     "audioFile": "115c3a73a596.mp3"
@@ -2399,10 +2262,6 @@
   "胎": {
     "ttsText": "“胎”：“轮胎”的“胎”",
     "audioFile": "e480aed30e4d.mp3"
-  },
-  "刊": {
-    "ttsText": "“刊”：“报刊”的“刊”",
-    "audioFile": "d69039858a9a.mp3"
   },
   "发": {
     "ttsText": "“发”：“头发”的“发”",
@@ -2568,17 +2427,9 @@
     "ttsText": "“汁”：“果汁”的“汁”",
     "audioFile": "1f4ede32a101.mp3"
   },
-  "伯": {
-    "ttsText": "“伯”：“伯伯”的“伯”",
-    "audioFile": "fad1be3bd252.mp3"
-  },
   "父": {
     "ttsText": "“父”：“父亲”的“父”",
     "audioFile": "b5cca5075e5a.mp3"
-  },
-  "媳": {
-    "ttsText": "“媳”：“媳妇”的“媳”",
-    "audioFile": "d63b1b9b3179.mp3"
   },
   "叔": {
     "ttsText": "“叔”：“叔叔”的“叔”",
@@ -2596,21 +2447,9 @@
     "ttsText": "“兴”：“高兴”的“兴”",
     "audioFile": "20509de41188.mp3"
   },
-  "摸": {
-    "ttsText": "“摸”：“摸头”的“摸”",
-    "audioFile": "d925f3f422fb.mp3"
-  },
-  "性": {
-    "ttsText": "“性”：“性格”的“性”",
-    "audioFile": "f588a20ba3d7.mp3"
-  },
   "格": {
     "ttsText": "“格”：“性格”的“格”",
     "audioFile": "f6e2bebce89d.mp3"
-  },
-  "标": {
-    "ttsText": "“标”：“标点”的“标”",
-    "audioFile": "eff6a0bbe171.mp3"
   },
   "觉": {
     "ttsText": "“觉”：“感觉”的“觉”",
@@ -2711,10 +2550,6 @@
   "萄": {
     "ttsText": "“萄”：“葡萄”的“萄”",
     "audioFile": "bc5d20c5fe23.mp3"
-  },
-  "蚕": {
-    "ttsText": "“蚕”：“蚕宝宝”的“蚕”",
-    "audioFile": "33c0ea48c834.mp3"
   },
   "尝": {
     "ttsText": "“尝”：“品尝”的“尝”",
@@ -2836,17 +2671,9 @@
     "ttsText": "“伞”：“雨伞”的“伞”",
     "audioFile": "2fd1f31423a9.mp3"
   },
-  "伸": {
-    "ttsText": "“伸”：“伸手”的“伸”",
-    "audioFile": "038337c78d8e.mp3"
-  },
   "懒": {
     "ttsText": "“懒”：“懒惰”的“懒”",
     "audioFile": "53a0a1328951.mp3"
-  },
-  "惰": {
-    "ttsText": "“惰”：“懒惰”的“惰”",
-    "audioFile": "fdc120cd8044.mp3"
   },
   "婴": {
     "ttsText": "“婴”：“婴儿”的“婴”",
@@ -2951,10 +2778,6 @@
   "普": {
     "ttsText": "“普”：“普通”的“普”",
     "audioFile": "d124c3419995.mp3"
-  },
-  "凯": {
-    "ttsText": "“凯”：“小凯”的“凯”",
-    "audioFile": "209f270302ab.mp3"
   },
   "终": {
     "ttsText": "“终”：“终于”的“终”",
@@ -3156,14 +2979,6 @@
     "ttsText": "“置”：“位置”的“置”",
     "audioFile": "c2b2a3699a34.mp3"
   },
-  "技": {
-    "ttsText": "“技”：“技术”的“技”",
-    "audioFile": "ee8d1515c1be.mp3"
-  },
-  "演": {
-    "ttsText": "“演”：“表演”的“演”",
-    "audioFile": "e3f96e5ee999.mp3"
-  },
   "防": {
     "ttsText": "“防”：“消防队”的“防”",
     "audioFile": "658624bcdc33.mp3"
@@ -3208,18 +3023,6 @@
     "ttsText": "“泳”：“游泳”的“泳”",
     "audioFile": "60ad20cb3e86.mp3"
   },
-  "淹": {
-    "ttsText": "“淹”：“淹水”的“淹”",
-    "audioFile": "34e22dbaf576.mp3"
-  },
-  "浅": {
-    "ttsText": "“浅”：“水很浅”的“浅”",
-    "audioFile": "bd43c9554241.mp3"
-  },
-  "希": {
-    "ttsText": "“希”：“希望”的“希”",
-    "audioFile": "e76acb952cca.mp3"
-  },
   "望": {
     "ttsText": "“望”：“望远镜”的“望”",
     "audioFile": "54dc1a7f7735.mp3"
@@ -3227,10 +3030,6 @@
   "童": {
     "ttsText": "“童”：“儿童”的“童”",
     "audioFile": "86df2c6c890b.mp3"
-  },
-  "厂": {
-    "ttsText": "“厂”：“工厂”的“厂”",
-    "audioFile": "cd8560bd3faa.mp3"
   },
   "古": {
     "ttsText": "“古”：“古代”的“古”",
@@ -3240,33 +3039,13 @@
     "ttsText": "“晓”：“天亮”的“晓”",
     "audioFile": "05f0747b48fb.mp3"
   },
-  "遭": {
-    "ttsText": "“遭”：“糟糕”的“遭”",
-    "audioFile": "830f401f6f9c.mp3"
-  },
   "偷": {
     "ttsText": "“偷”：“小偷”的“偷”",
     "audioFile": "f634351f8079.mp3"
   },
-  "刻": {
-    "ttsText": "“刻”：“立刻”的“刻”",
-    "audioFile": "98119d1849fa.mp3"
-  },
-  "封": {
-    "ttsText": "“封”：“信封”的“封”",
-    "audioFile": "a86d7da2aa42.mp3"
-  },
   "锁": {
     "ttsText": "“锁”：“门锁”的“锁”",
     "audioFile": "9933066495fc.mp3"
-  },
-  "逃": {
-    "ttsText": "“逃”：“逃跑”的“逃”",
-    "audioFile": "a9ea2893174c.mp3"
-  },
-  "挖": {
-    "ttsText": "“挖”：“挖土”的“挖”",
-    "audioFile": "cf12a1f7dce4.mp3"
   },
   "道": {
     "ttsText": "“道”：“道路”的“道”",
@@ -3275,10 +3054,6 @@
   "入": {
     "ttsText": "“入”：“入口”的“入”",
     "audioFile": "289dc3d1180a.mp3"
-  },
-  "馋": {
-    "ttsText": "“馋”：“馋嘴”的“馋”",
-    "audioFile": "55bb1f22f038.mp3"
   },
   "堆": {
     "ttsText": "“堆”：“土堆”的“堆”",
@@ -3295,10 +3070,6 @@
   "钻": {
     "ttsText": "“钻”：“钻洞”的“钻”",
     "audioFile": "38a6f2d84132.mp3"
-  },
-  "版": {
-    "ttsText": "“板”：“黑板”的“板”",
-    "audioFile": "bd213491733f.mp3"
   },
   "币": {
     "ttsText": "“币”：“硬币”的“币”",
@@ -3384,10 +3155,6 @@
     "ttsText": "“沉”：“沉下去”的“沉”",
     "audioFile": "795eed0cbdc4.mp3"
   },
-  "浮": {
-    "ttsText": "“浮”：“浮上来”的“浮”",
-    "audioFile": "4f662ad867de.mp3"
-  },
   "船": {
     "ttsText": "“船”：“小船”的“船”",
     "audioFile": "31e8431b4085.mp3"
@@ -3423,10 +3190,6 @@
   "景": {
     "ttsText": "“景”：“景色”的“景”",
     "audioFile": "30a38f0ef969.mp3"
-  },
-  "旋": {
-    "ttsText": "“旋”：“旋转”的“旋”",
-    "audioFile": "4fb49f56da3e.mp3"
   },
   "壁": {
     "ttsText": "“壁”：“墙壁”的“壁”",
@@ -3468,14 +3231,6 @@
     "ttsText": "“代”：“代表”的“代”",
     "audioFile": "a848a5bbc035.mp3"
   },
-  "哄": {
-    "ttsText": "“哄”：“哄宝宝”的“哄”",
-    "audioFile": "60cb6cc7ba32.mp3"
-  },
-  "雅": {
-    "ttsText": "“雅”：“文雅”的“雅”",
-    "audioFile": "26e9db40b72f.mp3"
-  },
   "珠": {
     "ttsText": "“珠”：“珍珠”的“珠”",
     "audioFile": "fbbab99c64a7.mp3"
@@ -3495,10 +3250,6 @@
   "换": {
     "ttsText": "“换”：“交换”的“换”",
     "audioFile": "18636ea97b13.mp3"
-  },
-  "痒": {
-    "ttsText": "“痒”：“痒痒”的“痒”",
-    "audioFile": "5db12dcb0b7f.mp3"
   },
   "蓝": {
     "ttsText": "“蓝”：“蓝色”的“蓝”",
@@ -3556,18 +3307,6 @@
     "ttsText": "“特”：“特别”的“特”",
     "audioFile": "a3233012a801.mp3"
   },
-  "闲": {
-    "ttsText": "“闲”：“空闲”的“闲”",
-    "audioFile": "4a7e298bce67.mp3"
-  },
-  "伙": {
-    "ttsText": "“伙”：“伙伴”的“伙”",
-    "audioFile": "fb5e86c20c79.mp3"
-  },
-  "邮": {
-    "ttsText": "“邮”：“邮票”的“邮”",
-    "audioFile": "f25e4a1b9ebd.mp3"
-  },
   "递": {
     "ttsText": "“递”：“快递”的“递”",
     "audioFile": "052387e4d320.mp3"
@@ -3584,14 +3323,6 @@
     "ttsText": "“应”：“应该”的“应”",
     "audioFile": "a1f03818bee0.mp3"
   },
-  "膝": {
-    "ttsText": "“膝”：“膝盖”的“膝”",
-    "audioFile": "1210e441580d.mp3"
-  },
-  "臂": {
-    "ttsText": "“臂”：“手臂”的“臂”",
-    "audioFile": "4b2e3840a060.mp3"
-  },
   "乘": {
     "ttsText": "“乘”：“乘车”的“乘”",
     "audioFile": "078516588973.mp3"
@@ -3603,10 +3334,6 @@
   "根": {
     "ttsText": "“根”：“树根”的“根”",
     "audioFile": "dee94af54e72.mp3"
-  },
-  "据": {
-    "ttsText": "“据”：“根据”的“据”",
-    "audioFile": "fa3bcc707c36.mp3"
   },
   "提": {
     "ttsText": "“提”：“提手”的“提”",
@@ -3632,29 +3359,13 @@
     "ttsText": "“坡”：“山坡”的“坡”",
     "audioFile": "45ffc33d260b.mp3"
   },
-  "晶": {
-    "ttsText": "“晶”：“水晶”的“晶”",
-    "audioFile": "8edadc8e6da9.mp3"
-  },
   "录": {
     "ttsText": "“录”：“录音”的“录”",
     "audioFile": "d990e727bdc8.mp3"
   },
-  "杆": {
-    "ttsText": "“杆”：“竹竿”的“杆”",
-    "audioFile": "7958039d5c8f.mp3"
-  },
   "底": {
     "ttsText": "“底”：“鞋底”的“底”",
     "audioFile": "29102de32846.mp3"
-  },
-  "簧": {
-    "ttsText": "“簧”：“弹簧”的“簧”",
-    "audioFile": "a6f88d42c6f7.mp3"
-  },
-  "捏": {
-    "ttsText": "“捏”：“捏鼻子”的“捏”",
-    "audioFile": "df4f7946e7bd.mp3"
   },
   "板": {
     "ttsText": "“板”：“地板”的“板”",
@@ -3688,14 +3399,6 @@
     "ttsText": "“沙”：“沙子”的“沙”",
     "audioFile": "01e5fefbba96.mp3"
   },
-  "坑": {
-    "ttsText": "“坑”：“沙坑”的“坑”",
-    "audioFile": "510bd425836b.mp3"
-  },
-  "橘": {
-    "ttsText": "“橘”：“橘子”的“橘”",
-    "audioFile": "6aa2356b1aa3.mp3"
-  },
   "均": {
     "ttsText": "“均”：“平均”的“均”",
     "audioFile": "d536549dd904.mp3"
@@ -3720,17 +3423,9 @@
     "ttsText": "“共”：“一共”的“共”",
     "audioFile": "397730bca2b8.mp3"
   },
-  "吓": {
-    "ttsText": "“吓”：“吓人”的“吓”",
-    "audioFile": "c5ecf1ad0d2d.mp3"
-  },
   "哥": {
     "ttsText": "“哥”：“哥哥”的“哥”",
     "audioFile": "d1c6bba0530e.mp3"
-  },
-  "艳": {
-    "ttsText": "“艳”：“鲜艳”的“艳”",
-    "audioFile": "59ef409523c0.mp3"
   },
   "澡": {
     "ttsText": "“澡”：“洗澡”的“澡”",
@@ -3804,10 +3499,6 @@
     "ttsText": "“眠”：“冬眠”的“眠”",
     "audioFile": "b6e5fcecc854.mp3"
   },
-  "砂": {
-    "ttsText": "“砂”：“沙子”的“砂”",
-    "audioFile": "037e8d331040.mp3"
-  },
   "罐": {
     "ttsText": "“罐”：“罐头”的“罐”",
     "audioFile": "04a11fed0bf5.mp3"
@@ -3820,21 +3511,9 @@
     "ttsText": "“盐”：“食盐”的“盐”",
     "audioFile": "41d7feb98d89.mp3"
   },
-  "签": {
-    "ttsText": "“签”：“签名”的“签”",
-    "audioFile": "f891b1e4e588.mp3"
-  },
   "止": {
     "ttsText": "“止”：“停止”的“止”",
     "audioFile": "bf4bee911002.mp3"
-  },
-  "潮": {
-    "ttsText": "“潮”：“潮湿”的“潮”",
-    "audioFile": "f2645ee2dcd0.mp3"
-  },
-  "骗": {
-    "ttsText": "“骗”：“骗人”的“骗”",
-    "audioFile": "cacd459040bd.mp3"
   },
   "晒": {
     "ttsText": "“晒”：“晒太阳”的“晒”",
@@ -3847,10 +3526,6 @@
   "稻": {
     "ttsText": "“稻”：“稻草人”的“稻”",
     "audioFile": "6559192e649a.mp3"
-  },
-  "境": {
-    "ttsText": "“境”：“环境”的“境”",
-    "audioFile": "128d25771e75.mp3"
   },
   "忘": {
     "ttsText": "“忘”：“忘记”的“忘”",
@@ -4000,18 +3675,6 @@
     "ttsText": "“丢”：“丢球”的“丢”",
     "audioFile": "a209f34ea65c.mp3"
   },
-  "撕": {
-    "ttsText": "“撕”：“撕纸”的“撕”",
-    "audioFile": "26b7b6203b3c.mp3"
-  },
-  "历": {
-    "ttsText": "“历”：“日历”的“历”",
-    "audioFile": "c59ed424626b.mp3"
-  },
-  "末": {
-    "ttsText": "“末”：“周末”的“末”",
-    "audioFile": "41088be2c4ee.mp3"
-  },
   "差": {
     "ttsText": "“差”：“差一点”的“差”",
     "audioFile": "b425d027f2fb.mp3"
@@ -4027,10 +3690,6 @@
   "杯": {
     "ttsText": "“杯”：“杯子”的“杯”",
     "audioFile": "768d13365c02.mp3"
-  },
-  "冻": {
-    "ttsText": "“冻”：“冰冻”的“冻”",
-    "audioFile": "5e8c50cf7fa0.mp3"
   },
   "冰": {
     "ttsText": "“冰”：“冰淇淋”的“冰”",
@@ -4056,17 +3715,9 @@
     "ttsText": "“军”：“军人”的“军”",
     "audioFile": "5fa86eaf28b8.mp3"
   },
-  "团": {
-    "ttsText": "“团”：“面团”的“团”",
-    "audioFile": "2d28ba0342fc.mp3"
-  },
   "排": {
     "ttsText": "“排”：“排队”的“排”",
     "audioFile": "c71a49b5b0fe.mp3"
-  },
-  "兵": {
-    "ttsText": "“兵”：“士兵”的“兵”",
-    "audioFile": "d3026fa82f3a.mp3"
   },
   "七": {
     "ttsText": "“七”：“七天”的“七”",
@@ -4132,33 +3783,9 @@
     "ttsText": "“塞”：“塞满”的“塞”",
     "audioFile": "b17a63b2a084.mp3"
   },
-  "若": {
-    "ttsText": "“若”：“假若”的“若”",
-    "audioFile": "abbea767b483.mp3"
-  },
-  "睹": {
-    "ttsText": "“睹”：“目睹”的“睹”",
-    "audioFile": "9b81db04966d.mp3"
-  },
-  "燕": {
-    "ttsText": "“燕”：“小燕”的“燕”",
-    "audioFile": "ab209d2ae1e4.mp3"
-  },
-  "央": {
-    "ttsText": "“央”：“中央”的“央”",
-    "audioFile": "bf8e1855c6da.mp3"
-  },
-  "急": {
-    "ttsText": "“急”：“着急”的“急”",
-    "audioFile": "6c24cd302d4c.mp3"
-  },
   "及": {
     "ttsText": "“及”：“及时”的“及”",
     "audioFile": "ad415babf280.mp3"
-  },
-  "刹": {
-    "ttsText": "“刹”：“刹车”的“刹”",
-    "audioFile": "e6b4ef313176.mp3"
   },
   "慢": {
     "ttsText": "“慢”：“慢慢”的“慢”",
@@ -4175,18 +3802,6 @@
   "随": {
     "ttsText": "“随”：“随便”的“随”",
     "audioFile": "a95f92589735.mp3"
-  },
-  "惊": {
-    "ttsText": "“惊”：“惊讶”的“惊”",
-    "audioFile": "34394f5e25a2.mp3"
-  },
-  "状": {
-    "ttsText": "“状”：“形状”的“状”",
-    "audioFile": "66dc4200a03a.mp3"
-  },
-  "跟": {
-    "ttsText": "“跟”：“脚跟”的“跟”",
-    "audioFile": "42ef72064a6b.mp3"
   },
   "烂": {
     "ttsText": "“烂”：“苹果烂掉”的“烂”",
@@ -4248,14 +3863,6 @@
     "ttsText": "“拍”：“拍手”的“拍”",
     "audioFile": "686e912802bd.mp3"
   },
-  "俯": {
-    "ttsText": "“俯”：“俯地挺身”的“俯”",
-    "audioFile": "ef920d747253.mp3"
-  },
-  "挺": {
-    "ttsText": "“挺”：“俯地挺身”的“挺”",
-    "audioFile": "50bbb5d70a8b.mp3"
-  },
   "更": {
     "ttsText": "“更”：“变更”的“更”",
     "audioFile": "52de4b61bef4.mp3"
@@ -4263,22 +3870,6 @@
   "单": {
     "ttsText": "“单”：“单手”的“单”",
     "audioFile": "0db272f14a31.mp3"
-  },
-  "亿": {
-    "ttsText": "“亿”：“一亿”的“亿”",
-    "audioFile": "f6d9cba5dc2b.mp3"
-  },
-  "镶": {
-    "ttsText": "“镶”：“镶了钻石”的“镶”",
-    "audioFile": "b0f0b7fbcd22.mp3"
-  },
-  "含": {
-    "ttsText": "“含”：“含着”的“含”",
-    "audioFile": "78eb78f1ac52.mp3"
-  },
-  "玲": {
-    "ttsText": "“玲”：“小玲”的“玲”",
-    "audioFile": "035c75c21038.mp3"
   },
   "钥": {
     "ttsText": "“钥”：“钥匙”的“钥”",
@@ -4292,18 +3883,6 @@
     "ttsText": "“窗”：“窗户”的“窗”",
     "audioFile": "fd1508e3e62b.mp3"
   },
-  "鲜": {
-    "ttsText": "“鲜”：“鲜花的新鲜”的“鲜”",
-    "audioFile": "34910bd8e452.mp3"
-  },
-  "番": {
-    "ttsText": "“番”：“番茄”的“番”",
-    "audioFile": "32da0e189026.mp3"
-  },
-  "茄": {
-    "ttsText": "“茄”：“番茄”的“茄”",
-    "audioFile": "4af637aacdf7.mp3"
-  },
   "菜": {
     "ttsText": "“菜”：“青菜”的“菜”",
     "audioFile": "d306800978d5.mp3"
@@ -4311,10 +3890,6 @@
   "豆": {
     "ttsText": "“豆”：“豆腐”的“豆”",
     "audioFile": "e5c463ee84d5.mp3"
-  },
-  "腐": {
-    "ttsText": "“腐”：“豆腐”的“腐”",
-    "audioFile": "1bbc3fef1e43.mp3"
   },
   "朝": {
     "ttsText": "“朝”：“朝向”的“朝”",
@@ -4324,10 +3899,6 @@
     "ttsText": "“追”：“追赶”的“追”",
     "audioFile": "27ef7131c298.mp3"
   },
-  "浣": {
-    "ttsText": "“浣”：“浣熊”的“浣”",
-    "audioFile": "94d9ccfc480a.mp3"
-  },
   "答": {
     "ttsText": "“答”：“回答”的“答”",
     "audioFile": "ca043efe35c3.mp3"
@@ -4335,10 +3906,6 @@
   "冷": {
     "ttsText": "“冷”：“寒冷”的“冷”",
     "audioFile": "44cfb57f8c2b.mp3"
-  },
-  "隔": {
-    "ttsText": "“隔”：“隔壁”的“隔”",
-    "audioFile": "bdf4d70196ea.mp3"
   },
   "读": {
     "ttsText": "“读”：“读书”的“读”",
@@ -4364,14 +3931,6 @@
     "ttsText": "“痛”：“疼痛”的“痛”",
     "audioFile": "2ae2496f51a9.mp3"
   },
-  "董": {
-    "ttsText": "“董”：“小董”的“董”",
-    "audioFile": "6315750ed214.mp3"
-  },
-  "顿": {
-    "ttsText": "“顿”：“一顿饭”的“顿”",
-    "audioFile": "6725fb89463d.mp3"
-  },
   "砸": {
     "ttsText": "“砸”：“砸到”的“砸”",
     "audioFile": "2cecd7c4bca0.mp3"
@@ -4396,21 +3955,9 @@
     "ttsText": "“达”：“到达”的“达”",
     "audioFile": "04266e71f330.mp3"
   },
-  "毕": {
-    "ttsText": "“毕”：“毕业”的“毕”",
-    "audioFile": "6c7bd57b0063.mp3"
-  },
-  "乎": {
-    "ttsText": "“乎”：“几乎”的“乎”",
-    "audioFile": "5152de67bb29.mp3"
-  },
   "节": {
     "ttsText": "“节”：“节目”的“节”",
     "audioFile": "b4b3fb5ae301.mp3"
-  },
-  "缺": {
-    "ttsText": "“缺”：“缺少”的“缺”",
-    "audioFile": "e21576637fa3.mp3"
   },
   "育": {
     "ttsText": "“育”：“体育”的“育”",
@@ -4419,14 +3966,6 @@
   "餐": {
     "ttsText": "“餐”：“午餐”的“餐”",
     "audioFile": "1c67b368b771.mp3"
-  },
-  "观": {
-    "ttsText": "“观”：“观看”的“观”",
-    "audioFile": "9504105ff283.mp3"
-  },
-  "众": {
-    "ttsText": "“众”：“观众”的“众”",
-    "audioFile": "5a0205ab1860.mp3"
   },
   "愈": {
     "ttsText": "“愈”：“痊愈”的“愈”",
@@ -4460,29 +3999,9 @@
     "ttsText": "“吵”：“吵闹”的“吵”",
     "audioFile": "4284c2fdffd2.mp3"
   },
-  "汪": {
-    "ttsText": "“汪”：“小狗汪汪叫”的“汪”",
-    "audioFile": "007868e07c99.mp3"
-  },
-  "螃": {
-    "ttsText": "“螃”：“螃蟹”的“螃”",
-    "audioFile": "ea4b53d779d2.mp3"
-  },
-  "蟹": {
-    "ttsText": "“蟹”：“螃蟹”的“蟹”",
-    "audioFile": "3c9d07c713b8.mp3"
-  },
   "捡": {
     "ttsText": "“捡”：“捡东西”的“捡”",
     "audioFile": "ab37af74880e.mp3"
-  },
-  "陷": {
-    "ttsText": "“陷”：“陷进去”的“陷”",
-    "audioFile": "1a2a3300aaba.mp3"
-  },
-  "柏": {
-    "ttsText": "“柏”：“柏树”的“柏”",
-    "audioFile": "1356e2447097.mp3"
   },
   "美": {
     "ttsText": "“美”：“美丽”的“美”",
@@ -4512,14 +4031,6 @@
     "ttsText": "“哈”：“哈哈大笑”的“哈”",
     "audioFile": "76b2fb30af54.mp3"
   },
-  "济": {
-    "ttsText": "“济”：“经济”的“济”",
-    "audioFile": "e94ed2cd83a4.mp3"
-  },
-  "值": {
-    "ttsText": "“值”：“价值”的“值”",
-    "audioFile": "3043d7167195.mp3"
-  },
   "类": {
     "ttsText": "“类”：“种类”的“类”",
     "audioFile": "cfee2fed5997.mp3"
@@ -4535,10 +4046,6 @@
   "卜": {
     "ttsText": "“卜”：“萝卜”的“卜”",
     "audioFile": "f679f9de55e6.mp3"
-  },
-  "派": {
-    "ttsText": "“派”：“气派”的“派”",
-    "audioFile": "4c71a4b5e0c8.mp3"
   },
   "菠": {
     "ttsText": "“菠”：“菠菜”的“菠”",
@@ -4560,49 +4067,17 @@
     "ttsText": "“饱”：“吃饱”的“饱”",
     "audioFile": "be1a0224c1b2.mp3"
   },
-  "鸽": {
-    "ttsText": "“鸽”：“鸽子”的“鸽”",
-    "audioFile": "346daa2c7427.mp3"
-  },
   "齿": {
     "ttsText": "“齿”：“牙齿”的“齿”",
     "audioFile": "2ebd0b4a4f5f.mp3"
-  },
-  "讶": {
-    "ttsText": "“讶”：“惊讶”的“讶”",
-    "audioFile": "dcde1899ef5c.mp3"
-  },
-  "患": {
-    "ttsText": "“患”：“患者”的“患”",
-    "audioFile": "090c0816e2a0.mp3"
-  },
-  "哇": {
-    "ttsText": "“哇”：“哇哇叫”的“哇”",
-    "audioFile": "4db2a1823656.mp3"
-  },
-  "蛀": {
-    "ttsText": "“蛀”：“蛀牙”的“蛀”",
-    "audioFile": "9f29fbaf7e40.mp3"
-  },
-  "遍": {
-    "ttsText": "“遍”：“一遍”的“遍”",
-    "audioFile": "99f02bb6e94b.mp3"
   },
   "卷": {
     "ttsText": "“卷”：“卷纸”的“卷”",
     "audioFile": "712e6cc2f435.mp3"
   },
-  "营": {
-    "ttsText": "“萤”：“萤火虫”的“萤”",
-    "audioFile": "d4bc0365af15.mp3"
-  },
   "试": {
     "ttsText": "“试”：“考试”的“试”",
     "audioFile": "bc32f191faf4.mp3"
-  },
-  "批": {
-    "ttsText": "“批”：“批改”的“批”",
-    "audioFile": "758c4eb30b9b.mp3"
   },
   "兔": {
     "ttsText": "“兔”：“小兔”的“兔”",
@@ -4612,10 +4087,6 @@
     "ttsText": "“赢”：“赢了”的“赢”",
     "audioFile": "85cde7faefa0.mp3"
   },
-  "仰": {
-    "ttsText": "“仰”：“仰卧起坐”的“仰”",
-    "audioFile": "62483eee2703.mp3"
-  },
   "卧": {
     "ttsText": "“卧”：“仰卧起坐”的“卧”",
     "audioFile": "c7afb6390555.mp3"
@@ -4623,14 +4094,6 @@
   "扔": {
     "ttsText": "“扔”：“扔球”的“扔”",
     "audioFile": "010d2573ebc3.mp3"
-  },
-  "挂": {
-    "ttsText": "“挂”：“挂衣服”的“挂”",
-    "audioFile": "27ae8525b80e.mp3"
-  },
-  "叠": {
-    "ttsText": "“叠”：“叠被子”的“叠”",
-    "audioFile": "add623900f17.mp3"
   },
   "浸": {
     "ttsText": "“浸”：“浸湿”的“浸”",
@@ -4660,33 +4123,17 @@
     "ttsText": "“输”：“输了”的“输”",
     "audioFile": "389c3fc55dc9.mp3"
   },
-  "噩": {
-    "ttsText": "“噩”：“噩梦”的“噩”",
-    "audioFile": "06cdd7a4ca29.mp3"
-  },
   "商": {
     "ttsText": "“商”：“商人”的“商”",
     "audioFile": "509e36388737.mp3"
-  },
-  "尼": {
-    "ttsText": "“尼”：“尼龙”的“尼”",
-    "audioFile": "002f38859eee.mp3"
   },
   "波": {
     "ttsText": "“波”：“波浪”的“波”",
     "audioFile": "42cc9f3219e2.mp3"
   },
-  "某": {
-    "ttsText": "“某”：“某个”的“某”",
-    "audioFile": "7e789401a3b4.mp3"
-  },
   "滚": {
     "ttsText": "“滚”：“滚动”的“滚”",
     "audioFile": "c8ee63c608f7.mp3"
-  },
-  "筒": {
-    "ttsText": "“筒”：“竹筒”的“筒”",
-    "audioFile": "51be70486927.mp3"
   },
   "压": {
     "ttsText": "“压”：“压力”的“压”",
@@ -4700,37 +4147,13 @@
     "ttsText": "“傅”：“师傅”的“傅”",
     "audioFile": "1b4b135828ce.mp3"
   },
-  "施": {
-    "ttsText": "“师”：“老师”的“师”",
-    "audioFile": "5db56418e9f7.mp3"
-  },
-  "嗜": {
-    "ttsText": "“好”：“爱好”的“好”",
-    "audioFile": "db5b14a3535f.mp3"
-  },
-  "扫": {
-    "ttsText": "“扫”：“打扫”的“扫”",
-    "audioFile": "adba970c12c6.mp3"
-  },
   "尾": {
     "ttsText": "“尾”：“尾巴”的“尾”",
     "audioFile": "d89cf7ff9ea2.mp3"
   },
-  "余": {
-    "ttsText": "“余”：“剩余”的“余”",
-    "audioFile": "7b9efae5d118.mp3"
-  },
   "切": {
     "ttsText": "“切”：“切蛋糕”的“切”",
     "audioFile": "93066e2ca53e.mp3"
-  },
-  "巧": {
-    "ttsText": "“巧”：“巧克力”的“巧”",
-    "audioFile": "6cdebf363e45.mp3"
-  },
-  "克": {
-    "ttsText": "“克”：“巧克力”的“克”",
-    "audioFile": "ba9ef9568049.mp3"
   },
   "愿": {
     "ttsText": "“愿”：“愿意”的“愿”",
@@ -4740,25 +4163,9 @@
     "ttsText": "“针”：“打针”的“针”",
     "audioFile": "845e1d63a5b6.mp3"
   },
-  "渔": {
-    "ttsText": "“渔”：“渔夫”的“渔”",
-    "audioFile": "63d88d9b2484.mp3"
-  },
-  "磁": {
-    "ttsText": "“磁”：“磁铁”的“磁”",
-    "audioFile": "3b3171a0919f.mp3"
-  },
-  "壳": {
-    "ttsText": "“壳”：“贝壳”的“壳”",
-    "audioFile": "f3444830d789.mp3"
-  },
   "够": {
     "ttsText": "“够”：“足够”的“够”",
     "audioFile": "1285cb9d4734.mp3"
-  },
-  "甜": {
-    "ttsText": "“甜”：“糖果”的“甜”",
-    "audioFile": "ba61d7681e52.mp3"
   },
   "蟑": {
     "ttsText": "“蟑”：“蟑螂”的“蟑”",
@@ -4792,10 +4199,6 @@
     "ttsText": "“砍”：“砍树”的“砍”",
     "audioFile": "dbb37bbd26a2.mp3"
   },
-  "宁": {
-    "ttsText": "“宁”：“宁波”的“宁”",
-    "audioFile": "a899a9e9dedc.mp3"
-  },
   "软": {
     "ttsText": "“软”：“软糖”的“软”",
     "audioFile": "420c596ebccc.mp3"
@@ -4804,14 +4207,6 @@
     "ttsText": "“涨”：“涨水”的“涨”",
     "audioFile": "705d781c9605.mp3"
   },
-  "厘": {
-    "ttsText": "“厘”：“厘米”的“厘”",
-    "audioFile": "2e4bb9be4d9d.mp3"
-  },
-  "佳": {
-    "ttsText": "“佳”：“佳佳”的“佳”",
-    "audioFile": "99a335eb163b.mp3"
-  },
   "奇": {
     "ttsText": "“奇”：“好奇”的“奇”",
     "audioFile": "0625c8cc244d.mp3"
@@ -4819,14 +4214,6 @@
   "仪": {
     "ttsText": "“仪”：“地球仪”的“仪”",
     "audioFile": "22fe2b109cd0.mp3"
-  },
-  "仅": {
-    "ttsText": "“仅”：“仅仅”的“仅”",
-    "audioFile": "287711c0cb1f.mp3"
-  },
-  "培": {
-    "ttsText": "“培”：“培养”的“培”",
-    "audioFile": "863606c1e358.mp3"
   },
   "收": {
     "ttsText": "“收”：“收玩具”的“收”",
@@ -4852,10 +4239,6 @@
     "ttsText": "“另”：“另外”的“另”",
     "audioFile": "e4400b54cdf4.mp3"
   },
-  "痕": {
-    "ttsText": "“痕”：“痕迹”的“痕”",
-    "audioFile": "5b485ffc8236.mp3"
-  },
   "宽": {
     "ttsText": "“宽”：“宽度”的“宽”",
     "audioFile": "8085c4060b7e.mp3"
@@ -4864,25 +4247,9 @@
     "ttsText": "“匹”：“一匹马”的“匹”",
     "audioFile": "1de11e42eb89.mp3"
   },
-  "嫌": {
-    "ttsText": "“嫌”：“嫌弃”的“嫌”",
-    "audioFile": "db0a1dc90980.mp3"
-  },
   "累": {
     "ttsText": "“累”：“劳累”的“累”",
     "audioFile": "26e9bd940f08.mp3"
-  },
-  "扑": {
-    "ttsText": "“扑”：“扑克牌”的“扑”",
-    "audioFile": "1f8292cf0ec3.mp3"
-  },
-  "喇": {
-    "ttsText": "“喇”：“喇叭”的“喇”",
-    "audioFile": "b802b94b64ba.mp3"
-  },
-  "叭": {
-    "ttsText": "“叭”：“喇叭”的“叭”",
-    "audioFile": "364021d8fd32.mp3"
   },
   "屁": {
     "ttsText": "“屁”：“屁股”的“屁”",
@@ -4936,14 +4303,6 @@
     "ttsText": "“竖”：“竖线”的“竖”",
     "audioFile": "b8acb52c00ef.mp3"
   },
-  "饲": {
-    "ttsText": "“饲”：“饲养员”的“饲”",
-    "audioFile": "eda684ba9c6d.mp3"
-  },
-  "串": {
-    "ttsText": "“串”：“一串香蕉”的“串”",
-    "audioFile": "1c3b52096b0a.mp3"
-  },
   "香": {
     "ttsText": "“香”：“香蕉”的“香”",
     "audioFile": "fd86d2de29d3.mp3"
@@ -4952,21 +4311,9 @@
     "ttsText": "“蕉”：“香蕉”的“蕉”",
     "audioFile": "74c33c89599f.mp3"
   },
-  "竿": {
-    "ttsText": "“竿”：“竹竿”的“竿”",
-    "audioFile": "9918cd74b599.mp3"
-  },
   "求": {
     "ttsText": "“求”：“要求”的“求”",
     "audioFile": "ca4d6f380a0a.mp3"
-  },
-  "猩": {
-    "ttsText": "“猩”：“大猩猩”的“猩”",
-    "audioFile": "84710e736289.mp3"
-  },
-  "凳": {
-    "ttsText": "“凳”：“凳子”的“凳”",
-    "audioFile": "66316558a0a7.mp3"
   },
   "聪": {
     "ttsText": "“聪”：“聪明”的“聪”",
@@ -4979,10 +4326,6 @@
   "足": {
     "ttsText": "“足”：“足球”的“足”",
     "audioFile": "8942c4db577a.mp3"
-  },
-  "棵": {
-    "ttsText": "“棵”：“一棵树”的“棵”",
-    "audioFile": "7160e7eea6a3.mp3"
   },
   "距": {
     "ttsText": "“距”：“距离”的“距”",
@@ -5008,18 +4351,6 @@
     "ttsText": "“深”：“很深”的“深”",
     "audioFile": "c97a10dafa19.mp3"
   },
-  "舟": {
-    "ttsText": "“舟”：“小船”的“舟”",
-    "audioFile": "93951d922ecd.mp3"
-  },
-  "泅": {
-    "ttsText": "“泅”：“游泳”的“泅”",
-    "audioFile": "0a76c39c914e.mp3"
-  },
-  "漠": {
-    "ttsText": "“漠”：“沙漠”的“漠”",
-    "audioFile": "8228d5457a6d.mp3"
-  },
   "籽": {
     "ttsText": "“籽”：“菜籽”的“籽”",
     "audioFile": "09d2a4fbd103.mp3"
@@ -5040,49 +4371,21 @@
     "ttsText": "“勺”：“汤勺”的“勺”",
     "audioFile": "dccbbd0097b5.mp3"
   },
-  "稀": {
-    "ttsText": "“稀”：“稀饭”的“稀”",
-    "audioFile": "60ff487cc20e.mp3"
-  },
-  "粥": {
-    "ttsText": "“粥”：“喝粥”的“粥”",
-    "audioFile": "b08547593d55.mp3"
-  },
   "爷": {
     "ttsText": "“爷”：“爷爷”的“爷”",
     "audioFile": "479d20f2c9c3.mp3"
-  },
-  "遗": {
-    "ttsText": "“遗”：“留下”的“遗”",
-    "audioFile": "9c484a1b3bf2.mp3"
-  },
-  "憾": {
-    "ttsText": "“憾”：“遗憾”的“憾”",
-    "audioFile": "6cb54a74912f.mp3"
   },
   "彩": {
     "ttsText": "“彩”：“彩色”的“彩”",
     "audioFile": "37a7a1da59b1.mp3"
   },
-  "碗": {
-    "ttsText": "“碗”：“饭碗”的“碗”",
-    "audioFile": "97f1bca0f354.mp3"
-  },
   "摔": {
     "ttsText": "“摔”：“摔倒”的“摔”",
     "audioFile": "d7e6b35c8229.mp3"
   },
-  "瓷": {
-    "ttsText": "“瓷”：“瓷碗”的“瓷”",
-    "audioFile": "a81f51d0f67f.mp3"
-  },
   "论": {
     "ttsText": "“论”：“讨论”的“论”",
     "audioFile": "3097df50e549.mp3"
-  },
-  "麽": {
-    "ttsText": "“麽”：“什麽”的“麽”",
-    "audioFile": "78147f829cd1.mp3"
   },
   "拥": {
     "ttsText": "“拥”：“拥抱”的“拥”",
@@ -5096,45 +4399,17 @@
     "ttsText": "“降”：“降落伞”的“降”",
     "audioFile": "5175083f77d2.mp3"
   },
-  "确": {
-    "ttsText": "“确”：“正确”的“确”",
-    "audioFile": "d146133d2019.mp3"
-  },
-  "页": {
-    "ttsText": "“页”：“书页”的“页”",
-    "audioFile": "863201f04aa5.mp3"
-  },
   "厚": {
     "ttsText": "“厚”：“厚厚”的“厚”",
     "audioFile": "a576de2ee7a2.mp3"
-  },
-  "合": {
-    "ttsText": "“合”：“合起来”的“合”",
-    "audioFile": "461510c888ca.mp3"
-  },
-  "集": {
-    "ttsText": "“集”：“集合”的“集”",
-    "audioFile": "6890abb48394.mp3"
   },
   "喊": {
     "ttsText": "“喊”：“大喊”的“喊”",
     "audioFile": "936da09e45b3.mp3"
   },
-  "静": {
-    "ttsText": "“静”：“安静”的“静”",
-    "audioFile": "c468f32c13b0.mp3"
-  },
-  "锅": {
-    "ttsText": "“锅”：“铁锅”的“锅”",
-    "audioFile": "6b66f829b361.mp3"
-  },
   "业": {
     "ttsText": "“业”：“作业”的“业”",
     "audioFile": "d14d4092676f.mp3"
-  },
-  "撑": {
-    "ttsText": "“撑”：“撑伞”的“撑”",
-    "audioFile": "e29f5a648240.mp3"
   },
   "洲": {
     "ttsText": "“洲”：“亚洲”的“洲”",
@@ -5144,21 +4419,9 @@
     "ttsText": "“魔”：“魔术”的“魔”",
     "audioFile": "23ad535fe68e.mp3"
   },
-  "暂": {
-    "ttsText": "“暂”：“暂停”的“暂”",
-    "audioFile": "7a41cb4e67ba.mp3"
-  },
-  "键": {
-    "ttsText": "“键”：“键盘”的“键”",
-    "audioFile": "6d55be2909c7.mp3"
-  },
   "骨": {
     "ttsText": "“骨”：“骨头”的“骨”",
     "audioFile": "576ef771a8e9.mp3"
-  },
-  "姆": {
-    "ttsText": "“妈”：“妈妈”的“妈”",
-    "audioFile": "a6c5aff2e0f0.mp3"
   },
   "吧": {
     "ttsText": "“吧”：“好吧”的“吧”",
@@ -5188,33 +4451,13 @@
     "ttsText": "“石”：“石头”的“石”",
     "audioFile": "e136368e1773.mp3"
   },
-  "诉": {
-    "ttsText": "“诉”：“告诉”的“诉”",
-    "audioFile": "116ec533d153.mp3"
-  },
-  "砖": {
-    "ttsText": "“砖”：“砖头”的“砖”",
-    "audioFile": "95fac8646c6f.mp3"
-  },
   "孵": {
     "ttsText": "“孵”：“孵蛋”的“孵”",
     "audioFile": "abde299ead9f.mp3"
   },
-  "臭": {
-    "ttsText": "“臭”：“臭味”的“臭”",
-    "audioFile": "eae1a5aafbd3.mp3"
-  },
   "羽": {
     "ttsText": "“羽”：“羽毛”的“羽”",
     "audioFile": "13189e1af7ff.mp3"
-  },
-  "乔": {
-    "ttsText": "“乔”：“大桥”的“乔”",
-    "audioFile": "3efc302b66e5.mp3"
-  },
-  "丹": {
-    "ttsText": "“丹”：“红色”的“丹”",
-    "audioFile": "bab93bdf1038.mp3"
   },
   "阵": {
     "ttsText": "“阵”：“一阵风”的“阵”",
@@ -5232,61 +4475,21 @@
     "ttsText": "“支”：“一支笔”的“支”",
     "audioFile": "d107cd689ac8.mp3"
   },
-  "舔": {
-    "ttsText": "“舔”：“舔一舔”的“舔”",
-    "audioFile": "3d8547462f2d.mp3"
-  },
   "棒": {
     "ttsText": "“棒”：“冰棒”的“棒”",
     "audioFile": "bcedfa942b2a.mp3"
-  },
-  "椰": {
-    "ttsText": "“椰”：“椰子”的“椰”",
-    "audioFile": "ce0d10aca48b.mp3"
   },
   "奖": {
     "ttsText": "“奖”：“奖状”的“奖”",
     "audioFile": "9585f611f10b.mp3"
   },
-  "頓": {
-    "ttsText": "“顿”：“牛顿”的“顿”",
-    "audioFile": "cd2c58d0e1dd.mp3"
-  },
   "击": {
     "ttsText": "“击”：“击中”的“击”",
     "audioFile": "fb542c2530f7.mp3"
   },
-  "引": {
-    "ttsText": "“引”：“吸引”的“引”",
-    "audioFile": "6a9a36cfd3ef.mp3"
-  },
-  "待": {
-    "ttsText": "“待”：“等待”的“待”",
-    "audioFile": "6a73e36e2a0e.mp3"
-  },
-  "愚": {
-    "ttsText": "“愚”：“愚蠢”的“愚”",
-    "audioFile": "8ca3371111ee.mp3"
-  },
-  "蠢": {
-    "ttsText": "“蠢”：“愚蠢”的“蠢”",
-    "audioFile": "f9a624237fde.mp3"
-  },
   "积": {
     "ttsText": "“积”：“积木”的“积”",
     "audioFile": "8708cfcc08c5.mp3"
-  },
-  "猎": {
-    "ttsText": "“猎”：“猎人”的“猎”",
-    "audioFile": "c41ede032879.mp3"
-  },
-  "饥": {
-    "ttsText": "“饥”：“饥饿”的“饥”",
-    "audioFile": "54eb185a9a6a.mp3"
-  },
-  "绵": {
-    "ttsText": "“绵”：“绵羊”的“绵”",
-    "audioFile": "b0b8a4be32cb.mp3"
   },
   "舒": {
     "ttsText": "“舒”：“舒服”的“舒”",
@@ -5295,10 +4498,6 @@
   "宇": {
     "ttsText": "“宇”：“宇宙”的“宇”",
     "audioFile": "92aee7506f59.mp3"
-  },
-  "疑": {
-    "ttsText": "“疑”：“疑问”的“疑”",
-    "audioFile": "abe08f0a5049.mp3"
   },
   "言": {
     "ttsText": "“言”：“语言”的“言”",
@@ -5320,14 +4519,6 @@
     "ttsText": "“精”：“精神”的“精”",
     "audioFile": "00fc35e052c7.mp3"
   },
-  "暇": {
-    "ttsText": "“假”：“假期”的“假”",
-    "audioFile": "9d4f3473c0a8.mp3"
-  },
-  "务": {
-    "ttsText": "“务”：“任务”的“务”",
-    "audioFile": "88d0c7fef3de.mp3"
-  },
   "味": {
     "ttsText": "“味”：“味道”的“味”",
     "audioFile": "0442f7ad36df.mp3"
@@ -5335,18 +4526,6 @@
   "盛": {
     "ttsText": "“盛”：“盛开”的“盛”",
     "audioFile": "0aba3cd82ab3.mp3"
-  },
-  "枚": {
-    "ttsText": "“枚”：“一枚硬币”的“枚”",
-    "audioFile": "f6a6a0904053.mp3"
-  },
-  "咖": {
-    "ttsText": "“咖”：“咖啡”的“咖”",
-    "audioFile": "cef37304df64.mp3"
-  },
-  "啡": {
-    "ttsText": "“啡”：“咖啡”的“啡”",
-    "audioFile": "c13b9c139614.mp3"
   },
   "紧": {
     "ttsText": "“紧”：“紧紧”的“紧”",
@@ -5360,10 +4539,6 @@
     "ttsText": "“胆”：“胆小”的“胆”",
     "audioFile": "4eb3dce12d53.mp3"
   },
-  "剧": {
-    "ttsText": "“剧”：“电视剧”的“剧”",
-    "audioFile": "65af31a193fa.mp3"
-  },
   "习": {
     "ttsText": "“习”：“学习”的“习”",
     "audioFile": "0da87bb33e7c.mp3"
@@ -5375,18 +4550,6 @@
   "举": {
     "ttsText": "“举”：“举手”的“举”",
     "audioFile": "f76d0a0c1d7c.mp3"
-  },
-  "杰": {
-    "ttsText": "“杰”：“杰出”的“杰”",
-    "audioFile": "b83d61a73876.mp3"
-  },
-  "诗": {
-    "ttsText": "“诗”：“诗歌”的“诗”",
-    "audioFile": "5c822a3a4363.mp3"
-  },
-  "承": {
-    "ttsText": "“承”：“承认”的“承”",
-    "audioFile": "13282dcb219f.mp3"
   },
   "抄": {
     "ttsText": "“抄”：“抄写”的“抄”",
@@ -5400,38 +4563,6 @@
     "ttsText": "“案”：“答案”的“案”",
     "audioFile": "7ce576ab65a5.mp3"
   },
-  "娇": {
-    "ttsText": "“娇”：“娇气”的“娇”",
-    "audioFile": "11048ff63105.mp3"
-  },
-  "监": {
-    "ttsText": "“监”：“监考老师”的“监”",
-    "audioFile": "de310e8e7705.mp3"
-  },
-  "复": {
-    "ttsText": "“复”：“复习”的“复”",
-    "audioFile": "279a001fa289.mp3"
-  },
-  "萨": {
-    "ttsText": "“萨”：“拉萨”的“萨”",
-    "audioFile": "7714ca617ebd.mp3"
-  },
-  "篇": {
-    "ttsText": "“篇”：“一篇”的“篇”",
-    "audioFile": "936935011617.mp3"
-  },
-  "简": {
-    "ttsText": "“简”：“简单”的“简”",
-    "audioFile": "502072740747.mp3"
-  },
-  "凑": {
-    "ttsText": "“凑”：“凑在一起”的“凑”",
-    "audioFile": "569e1ef257ba.mp3"
-  },
-  "拼": {
-    "ttsText": "“拼”：“拼图”的“拼”",
-    "audioFile": "b1eacc6884ed.mp3"
-  },
   "旅": {
     "ttsText": "“旅”：“旅游”的“旅”",
     "audioFile": "7c93badb0965.mp3"
@@ -5444,69 +4575,21 @@
     "ttsText": "“脑”：“大脑”的“脑”",
     "audioFile": "dbb26bd571fb.mp3"
   },
-  "盼": {
-    "ttsText": "“盼”：“盼望”的“盼”",
-    "audioFile": "ad22184f9776.mp3"
-  },
-  "瞻": {
-    "ttsText": "“瞻”：“瞻望”的“瞻”",
-    "audioFile": "c607aa2828cd.mp3"
-  },
-  "适": {
-    "ttsText": "“适”：“合适”的“适”",
-    "audioFile": "003a46fec51a.mp3"
-  },
-  "梨": {
-    "ttsText": "“梨”：“梨子”的“梨”",
-    "audioFile": "2a522f13c276.mp3"
-  },
   "故": {
     "ttsText": "“故”：“故事”的“故”",
     "audioFile": "7f54e1ee72fa.mp3"
-  },
-  "谱": {
-    "ttsText": "“谱”：“菜谱”的“谱”",
-    "audioFile": "a8ff9bbf1ecb.mp3"
   },
   "枯": {
     "ttsText": "“枯”：“干枯”的“枯”",
     "audioFile": "bafe4518fb5a.mp3"
   },
-  "溪": {
-    "ttsText": "“溪”：“小溪”的“溪”",
-    "audioFile": "c6716f3986ff.mp3"
-  },
   "酒": {
     "ttsText": "“酒”：“喝酒”的“酒”",
     "audioFile": "8cd667fb2cdd.mp3"
   },
-  "碘": {
-    "ttsText": "“碘”：“碘酒”的“碘”",
-    "audioFile": "e651cade3b1c.mp3"
-  },
   "感": {
     "ttsText": "“感”：“感冒”的“感”",
     "audioFile": "a281374020d9.mp3"
-  },
-  "冒": {
-    "ttsText": "“冒”：“感冒”的“冒”",
-    "audioFile": "37a875b18602.mp3"
-  },
-  "勤": {
-    "ttsText": "“勤”：“勤劳”的“勤”",
-    "audioFile": "401dd61f205d.mp3"
-  },
-  "苦": {
-    "ttsText": "“苦”：“苦瓜”的“苦”",
-    "audioFile": "2f3178d7fbd8.mp3"
-  },
-  "赤": {
-    "ttsText": "“赤”：“红色”的“赤”",
-    "audioFile": "663089e719d0.mp3"
-  },
-  "辛": {
-    "ttsText": "“辛”：“辛苦”的“辛”",
-    "audioFile": "1fed57e81ee3.mp3"
   },
   "依": {
     "ttsText": "“依”：“依靠”的“依”",
@@ -5516,45 +4599,13 @@
     "ttsText": "“邻”：“邻居”的“邻”",
     "audioFile": "1ab637efd04e.mp3"
   },
-  "愁": {
-    "ttsText": "“愁”：“发愁”的“愁”",
-    "audioFile": "184d6d80a9dc.mp3"
-  },
   "眉": {
     "ttsText": "“眉”：“眉毛”的“眉”",
     "audioFile": "fe8e56ef711a.mp3"
   },
-  "展": {
-    "ttsText": "“展”：“展开”的“展”",
-    "audioFile": "2c0cbe216639.mp3"
-  },
-  "旁": {
-    "ttsText": "“旁”：“旁边”的“旁”",
-    "audioFile": "dcd15b7383ab.mp3"
-  },
-  "蚊": {
-    "ttsText": "“蚊”：“蚊子”的“蚊”",
-    "audioFile": "46fedbd7faa0.mp3"
-  },
-  "绕": {
-    "ttsText": "“绕”：“绕圈”的“绕”",
-    "audioFile": "c229a3222543.mp3"
-  },
-  "质": {
-    "ttsText": "“质”：“质量”的“质”",
-    "audioFile": "6939325d5da7.mp3"
-  },
-  "捕": {
-    "ttsText": "“捕”：“捕鱼”的“捕”",
-    "audioFile": "451e3304a971.mp3"
-  },
   "拖": {
     "ttsText": "“拖”：“拖把”的“拖”",
     "audioFile": "4c7c9a2ef4a2.mp3"
-  },
-  "帚": {
-    "ttsText": "“帚”：“扫帚”的“帚”",
-    "audioFile": "48945f8e08ae.mp3"
   },
   "神": {
     "ttsText": "“神”：“精神”的“神”",
@@ -5572,25 +4623,9 @@
     "ttsText": "“翁”：“不倒翁”的“翁”",
     "audioFile": "96d74274109d.mp3"
   },
-  "貌": {
-    "ttsText": "“貌”：“面貌”的“貌”",
-    "audioFile": "25d9a8c2aa0a.mp3"
-  },
-  "异": {
-    "ttsText": "“异”：“奇异”的“异”",
-    "audioFile": "0705f9f903d2.mp3"
-  },
   "限": {
     "ttsText": "“限”：“限制”的“限”",
     "audioFile": "cf5b2ac169f8.mp3"
-  },
-  "似": {
-    "ttsText": "“似”：“相似”的“似”",
-    "audioFile": "59ec643b497f.mp3"
-  },
-  "询": {
-    "ttsText": "“询”：“询问”的“询”",
-    "audioFile": "38dc01b4adf9.mp3"
   },
   "份": {
     "ttsText": "“份”：“年份”的“份”",
@@ -5604,29 +4639,9 @@
     "ttsText": "“萝”：“胡萝卜”的“萝”",
     "audioFile": "dd8592dad58b.mp3"
   },
-  "掷": {
-    "ttsText": "“掷”：“扔东西”的“掷”",
-    "audioFile": "f0fc92decae8.mp3"
-  },
   "职": {
     "ttsText": "“职”：“工作”的“职”",
     "audioFile": "22db765989b4.mp3"
-  },
-  "逗": {
-    "ttsText": "“逗”：“逗笑”的“逗”",
-    "audioFile": "00227f4394e4.mp3"
-  },
-  "寿": {
-    "ttsText": "“寿”：“长寿”的“寿”",
-    "audioFile": "d06cd723bc7b.mp3"
-  },
-  "蔬": {
-    "ttsText": "“蔬”：“蔬菜”的“蔬”",
-    "audioFile": "f47e26270539.mp3"
-  },
-  "畅": {
-    "ttsText": "“畅”：“顺畅”的“畅”",
-    "audioFile": "743ab6672a14.mp3"
   },
   "甚": {
     "ttsText": "“甚”：“什么”的“甚”",
@@ -5644,14 +4659,6 @@
     "ttsText": "“纪”：“年纪”的“纪”",
     "audioFile": "15e54c79a06c.mp3"
   },
-  "琪": {
-    "ttsText": "“琪”：“小琪”的“琪”",
-    "audioFile": "44a7bc56b387.mp3"
-  },
-  "抖": {
-    "ttsText": "“抖”：“手抖”的“抖”",
-    "audioFile": "d0bbc001574f.mp3"
-  },
   "漂": {
     "ttsText": "“漂”：“漂亮”的“漂”",
     "audioFile": "1b0c0261864d.mp3"
@@ -5659,10 +4666,6 @@
   "蒸": {
     "ttsText": "“蒸”：“蒸包”的“蒸”",
     "audioFile": "3293e6b1cd21.mp3"
-  },
-  "煎": {
-    "ttsText": "“煎”：“煎蛋”的“煎”",
-    "audioFile": "429cc34747bc.mp3"
   },
   "偏": {
     "ttsText": "“偏”：“偏心”的“偏”",
@@ -5672,33 +4675,13 @@
     "ttsText": "“争”：“争吵”的“争”",
     "audioFile": "f5496cfb6e92.mp3"
   },
-  "跷": {
-    "ttsText": "“跷”：“跷跷板”的“跷”",
-    "audioFile": "246c64fb5b7a.mp3"
-  },
   "翘": {
     "ttsText": "“翘”：“翘起来”的“翘”",
     "audioFile": "c1c066be6267.mp3"
   },
-  "萱": {
-    "ttsText": "“萱”：“萱草”的“萱”",
-    "audioFile": "22d1bac20356.mp3"
-  },
   "链": {
     "ttsText": "“链”：“拉链”的“链”",
     "audioFile": "bae3e267c8c6.mp3"
-  },
-  "薄": {
-    "ttsText": "“薄”：“薄饼”的“薄”",
-    "audioFile": "740e64837033.mp3"
-  },
-  "讨": {
-    "ttsText": "“讨”：“讨论”的“讨”",
-    "audioFile": "4e74afbc7acd.mp3"
-  },
-  "厌": {
-    "ttsText": "“厌”：“讨厌”的“厌”",
-    "audioFile": "4aa90b39da70.mp3"
   },
   "樱": {
     "ttsText": "“樱”：“樱桃”的“樱”",
@@ -5708,10 +4691,6 @@
     "ttsText": "“露”：“露水”的“露”",
     "audioFile": "c2e6516f29b3.mp3"
   },
-  "宵": {
-    "ttsText": "“宵”：“宵夜”的“宵”",
-    "audioFile": "1d3de2368390.mp3"
-  },
   "盔": {
     "ttsText": "“盔”：“头盔”的“盔”",
     "audioFile": "867c6b1e6997.mp3"
@@ -5719,14 +4698,6 @@
   "甲": {
     "ttsText": "“甲”：“盔甲”的“甲”",
     "audioFile": "d3f900539db4.mp3"
-  },
-  "兰": {
-    "ttsText": "“兰”：“兰花”的“兰”",
-    "audioFile": "21ca74cede63.mp3"
-  },
-  "吊": {
-    "ttsText": "“吊”：“吊兰”的“吊”",
-    "audioFile": "2da0bc0293f3.mp3"
   },
   "盒": {
     "ttsText": "“盒”：“盒子”的“盒”",
@@ -5748,14 +4719,6 @@
     "ttsText": "“辨”：“分辨”的“辨”",
     "audioFile": "6c7d08a79205.mp3"
   },
-  "环": {
-    "ttsText": "“环”：“圆环”的“环”",
-    "audioFile": "bf5cff5d1672.mp3"
-  },
-  "阴": {
-    "ttsText": "“阴”：“阴天”的“阴”",
-    "audioFile": "6c1140b10d76.mp3"
-  },
   "卡": {
     "ttsText": "“卡”：“卡车”的“卡”",
     "audioFile": "d2dafb3f0f33.mp3"
@@ -5772,53 +4735,17 @@
     "ttsText": "“夹”：“夹子”的“夹”",
     "audioFile": "b15b99567c53.mp3"
   },
-  "误": {
-    "ttsText": "“误”：“误会”的“误”",
-    "audioFile": "3de62c950bb4.mp3"
-  },
-  "逝": {
-    "ttsText": "“时”：“时间”的“时”",
-    "audioFile": "ebbb39d142f7.mp3"
-  },
-  "抛": {
-    "ttsText": "“球”：“皮球”的“球”",
-    "audioFile": "02117e6da003.mp3"
-  },
   "康": {
     "ttsText": "“康”：“健康”的“康”",
     "audioFile": "e1aaf758fbc7.mp3"
-  },
-  "浴": {
-    "ttsText": "“浴”：“淋浴”的“浴”",
-    "audioFile": "8268b56b99a0.mp3"
   },
   "冠": {
     "ttsText": "“冠”：“冠军”的“冠”",
     "audioFile": "8d394cbede8d.mp3"
   },
-  "蝌": {
-    "ttsText": "“蝌”：“蝌蚪”的“蝌”",
-    "audioFile": "592bef6a1602.mp3"
-  },
-  "蚪": {
-    "ttsText": "“蚪”：“蝌蚪”的“蚪”",
-    "audioFile": "1a55ceefd9ff.mp3"
-  },
-  "伶": {
-    "ttsText": "“伶”：“伶俐”的“伶”",
-    "audioFile": "6f51405c8e6f.mp3"
-  },
-  "俐": {
-    "ttsText": "“俐”：“伶俐”的“俐”",
-    "audioFile": "f836aa5a46eb.mp3"
-  },
   "微": {
     "ttsText": "“微”：“微笑”的“微”",
     "audioFile": "39d05139878f.mp3"
-  },
-  "羞": {
-    "ttsText": "“羞”：“害羞”的“羞”",
-    "audioFile": "f0439866fa2d.mp3"
   },
   "此": {
     "ttsText": "“此”：“这里”的“此”",
@@ -5832,17 +4759,9 @@
     "ttsText": "“垂”：“垂下”的“垂”",
     "audioFile": "2912f4d2699d.mp3"
   },
-  "柱": {
-    "ttsText": "“柱”：“柱子”的“柱”",
-    "audioFile": "d5bf6051f39b.mp3"
-  },
   "柴": {
     "ttsText": "“柴”：“火柴”的“柴”",
     "audioFile": "463a0bc82033.mp3"
-  },
-  "灾": {
-    "ttsText": "“灾”：“火灾”的“灾”",
-    "audioFile": "4fa0cba360ae.mp3"
   },
   "院": {
     "ttsText": "“院”：“医院”的“院”",
@@ -5852,25 +4771,9 @@
     "ttsText": "“塘”：“池塘”的“塘”",
     "audioFile": "efce43efcd62.mp3"
   },
-  "秀": {
-    "ttsText": "“袖”：“袖子”的“袖”",
-    "audioFile": "da478f0b5b84.mp3"
-  },
   "岗": {
     "ttsText": "“岗”：“山岗”的“岗”",
     "audioFile": "b26bcfbc2849.mp3"
-  },
-  "优": {
-    "ttsText": "“优”：“优秀”的“优”",
-    "audioFile": "684fc9028ea1.mp3"
-  },
-  "敌": {
-    "ttsText": "“敌”：“敌人”的“敌”",
-    "audioFile": "e0d2fd354731.mp3"
-  },
-  "瞄": {
-    "ttsText": "“瞄”：“瞄准”的“瞄”",
-    "audioFile": "0c051ed03066.mp3"
   },
   "乙": {
     "ttsText": "“乙”：“甲乙丙丁”的“乙”",
@@ -5884,10 +4787,6 @@
     "ttsText": "“雇”：“雇主”的“雇”",
     "audioFile": "e1d7456e15e1.mp3"
   },
-  "迄": {
-    "ttsText": "“迄”：“迄今为止”的“迄”",
-    "audioFile": "8f4a87e419fe.mp3"
-  },
   "暖": {
     "ttsText": "“暖”：“温暖”的“暖”",
     "audioFile": "8e814570fb4b.mp3"
@@ -5896,21 +4795,9 @@
     "ttsText": "“炉”：“火炉”的“炉”",
     "audioFile": "9dd4f197ee92.mp3"
   },
-  "拌": {
-    "ttsText": "“拌”：“搅拌”的“拌”",
-    "audioFile": "cd8b4ea8144b.mp3"
-  },
-  "匀": {
-    "ttsText": "“匀”：“均匀”的“匀”",
-    "audioFile": "5d6f49c7885a.mp3"
-  },
   "滩": {
     "ttsText": "“滩”：“沙滩”的“滩”",
     "audioFile": "8f7499070e84.mp3"
-  },
-  "严": {
-    "ttsText": "“严”：“严格”的“严”",
-    "audioFile": "0b0c20ba06e4.mp3"
   },
   "官": {
     "ttsText": "“官”：“老师”的“官”",
@@ -5968,25 +4855,9 @@
     "ttsText": "“秋”：“秋天”的“秋”",
     "audioFile": "8c357cca9067.mp3"
   },
-  "颇": {
-    "ttsText": "“颇”：“偏颇”的“颇”",
-    "audioFile": "e0fbec95f321.mp3"
-  },
-  "抽": {
-    "ttsText": "“抽”：“抽纸”的“抽”",
-    "audioFile": "f8a9fecb1953.mp3"
-  },
   "筋": {
     "ttsText": "“筋”：“面条筋道”的“筋”",
     "audioFile": "a0c7fe53c6d8.mp3"
-  },
-  "败": {
-    "ttsText": "“败”：“失败”的“败”",
-    "audioFile": "a4d633ea1d58.mp3"
-  },
-  "智": {
-    "ttsText": "“智”：“聪明”的“智”",
-    "audioFile": "dd0bf57907ac.mp3"
   },
   "锯": {
     "ttsText": "“锯”：“锯子”的“锯”",
@@ -5996,10 +4867,6 @@
     "ttsText": "“削”：“削铅笔”的“削”",
     "audioFile": "876f2c7744e2.mp3"
   },
-  "唇": {
-    "ttsText": "“唇”：“嘴唇”的“唇”",
-    "audioFile": "cb5d13888402.mp3"
-  },
   "聋": {
     "ttsText": "“聋”：“聋子”的“聋”",
     "audioFile": "d4b5212560d8.mp3"
@@ -6007,26 +4874,6 @@
   "脾": {
     "ttsText": "“脾”：“脾气”的“脾”",
     "audioFile": "800667d04587.mp3"
-  },
-  "挣": {
-    "ttsText": "“挣”：“挣扎”的“挣”",
-    "audioFile": "306bb79fde44.mp3"
-  },
-  "扎": {
-    "ttsText": "“扎”：“挣扎”的“扎”",
-    "audioFile": "2690e2a8242b.mp3"
-  },
-  "绣": {
-    "ttsText": "“绣”：“绣花”的“绣”",
-    "audioFile": "60d009304dc7.mp3"
-  },
-  "罚": {
-    "ttsText": "“罚”：“处罚”的“罚”",
-    "audioFile": "82503d3e066a.mp3"
-  },
-  "庭": {
-    "ttsText": "“庭”：“家庭”的“庭”",
-    "audioFile": "4214180a8d5d.mp3"
   },
   "扬": {
     "ttsText": "“扬”：“表扬”的“扬”",
@@ -6036,89 +4883,25 @@
     "ttsText": "“泪”：“眼泪”的“泪”",
     "audioFile": "8f85944aece8.mp3"
   },
-  "闯": {
-    "ttsText": "“闯”：“闯红灯”的“闯”",
-    "audioFile": "832e35a92d16.mp3"
-  },
   "研": {
     "ttsText": "“研”：“研究”的“研”",
     "audioFile": "8701e6e144d2.mp3"
-  },
-  "显": {
-    "ttsText": "“显”：“明显”的“显”",
-    "audioFile": "74c70a7a9006.mp3"
-  },
-  "措": {
-    "ttsText": "“措”：“手足无措”的“措”",
-    "audioFile": "becb74a61dae.mp3"
-  },
-  "懂": {
-    "ttsText": "“懂”：“懂得”的“懂”",
-    "audioFile": "6217c041c03c.mp3"
-  },
-  "笋": {
-    "ttsText": "“笋”：“竹笋”的“笋”",
-    "audioFile": "316308e40e35.mp3"
-  },
-  "幺": {
-    "ttsText": "“幺”：“最小”的“幺”",
-    "audioFile": "1baad864469e.mp3"
-  },
-  "茫": {
-    "ttsText": "“茫”：“芒果”的“茫”",
-    "audioFile": "c07415a4fc5a.mp3"
-  },
-  "泊": {
-    "ttsText": "“泊”：“停泊”的“泊”",
-    "audioFile": "fa41d3937386.mp3"
-  },
-  "踏": {
-    "ttsText": "“踏”：“踏步”的“踏”",
-    "audioFile": "d180cc5367d9.mp3"
-  },
-  "陆": {
-    "ttsText": "“陆”：“大陆”的“陆”",
-    "audioFile": "0dbe33ccf484.mp3"
   },
   "至": {
     "ttsText": "“至”：“至少”的“至”",
     "audioFile": "4a44aaabc3c5.mp3"
   },
-  "搬": {
-    "ttsText": "“搬”：“搬家”的“搬”",
-    "audioFile": "4aa9f4b7e4e2.mp3"
-  },
-  "曾": {
-    "ttsText": "“曾”：“曾经”的“曾”",
-    "audioFile": "e25615198466.mp3"
-  },
   "季": {
     "ttsText": "“季”：“季节”的“季”",
     "audioFile": "74687ff989f4.mp3"
-  },
-  "响": {
-    "ttsText": "“响”：“响亮”的“响”",
-    "audioFile": "3dce442752e1.mp3"
   },
   "妇": {
     "ttsText": "“妇”：“妈妈”的“妇”",
     "audioFile": "f3f6296e8ddf.mp3"
   },
-  "摆": {
-    "ttsText": "“摆”：“摆动”的“摆”",
-    "audioFile": "f4ad9a0025c6.mp3"
-  },
   "乖": {
     "ttsText": "“乖”：“乖乖”的“乖”",
     "audioFile": "35bfc53e6453.mp3"
-  },
-  "馒": {
-    "ttsText": "“馒”：“馒头”的“馒”",
-    "audioFile": "79c33cf04926.mp3"
-  },
-  "虹": {
-    "ttsText": "“虹”：“彩虹”的“虹”",
-    "audioFile": "4fb349a22920.mp3"
   },
   "姓": {
     "ttsText": "“姓”：“姓名”的“姓”",
@@ -6140,14 +4923,6 @@
     "ttsText": "“挑”：“挑选”的“挑”",
     "audioFile": "8e202ea14e3a.mp3"
   },
-  "筛": {
-    "ttsText": "“筛”：“筛子”的“筛”",
-    "audioFile": "0cf32e064e8b.mp3"
-  },
-  "列": {
-    "ttsText": "“列”：“火车”的“列”",
-    "audioFile": "4ba6e56a832e.mp3"
-  },
   "津": {
     "ttsText": "“津”：“天津”的“津”",
     "audioFile": "c15cd18fad62.mp3"
@@ -6159,10 +4934,6 @@
   "雀": {
     "ttsText": "“雀”：“孔雀”的“雀”",
     "audioFile": "c502f4382656.mp3"
-  },
-  "城": {
-    "ttsText": "“城”：“城市”的“城”",
-    "audioFile": "6cc92e56362a.mp3"
   },
   "庆": {
     "ttsText": "“庆”：“庆祝”的“庆”",
@@ -6180,10 +4951,6 @@
     "ttsText": "“晕”：“头晕”的“晕”",
     "audioFile": "7eab77d1f18c.mp3"
   },
-  "统": {
-    "ttsText": "“统”：“统一”的“统”",
-    "audioFile": "e9edd3678844.mp3"
-  },
   "固": {
     "ttsText": "“固”：“坚固”的“固”",
     "audioFile": "c16dc901bfee.mp3"
@@ -6199,18 +4966,6 @@
   "犯": {
     "ttsText": "“犯”：“犯错”的“犯”",
     "audioFile": "da939b209cc3.mp3"
-  },
-  "誓": {
-    "ttsText": "“誓”：“发誓”的“誓”",
-    "audioFile": "0dceb6c84ef8.mp3"
-  },
-  "昨": {
-    "ttsText": "“昨”：“昨天”的“昨”",
-    "audioFile": "104755e03590.mp3"
-  },
-  "橙": {
-    "ttsText": "“橙”：“橙子”的“橙”",
-    "audioFile": "708240cb014a.mp3"
   },
   "瞎": {
     "ttsText": "“瞎”：“眼睛”的“瞎”",
@@ -6228,29 +4983,9 @@
     "ttsText": "“呆”：“发呆”的“呆”",
     "audioFile": "b2223b69296b.mp3"
   },
-  "源": {
-    "ttsText": "“源”：“水源”的“源”",
-    "audioFile": "2414311e7091.mp3"
-  },
-  "贼": {
-    "ttsText": "“贼”：“小偷”的“贼”",
-    "audioFile": "d3550a551789.mp3"
-  },
-  "章": {
-    "ttsText": "“章”：“印章”的“章”",
-    "audioFile": "500fb855abc1.mp3"
-  },
-  "遇": {
-    "ttsText": "“遇”：“遇到”的“遇”",
-    "audioFile": "cea5ac144d28.mp3"
-  },
   "傻": {
     "ttsText": "“傻”：“傻瓜”的“傻”",
     "audioFile": "357b75276582.mp3"
-  },
-  "川": {
-    "ttsText": "“川”：“四川”的“川”",
-    "audioFile": "0a23c38f6a31.mp3"
   },
   "飘": {
     "ttsText": "“飘”：“飘动”的“飘”",
@@ -6276,85 +5011,29 @@
     "ttsText": "“唱”：“唱歌”的“唱”",
     "audioFile": "6fd693c251c6.mp3"
   },
-  "馆": {
-    "ttsText": "“馆”：“饭馆”的“馆”",
-    "audioFile": "1aa2575f7f6b.mp3"
-  },
-  "阅": {
-    "ttsText": "“阅”：“阅读”的“阅”",
-    "audioFile": "62108d88841c.mp3"
-  },
   "踢": {
     "ttsText": "“踢”：“踢球”的“踢”",
     "audioFile": "3ee147525e49.mp3"
-  },
-  "虑": {
-    "ttsText": "“虑”：“考虑”的“虑”",
-    "audioFile": "74abbe750bbe.mp3"
   },
   "拴": {
     "ttsText": "“拴”：“拴住”的“拴”",
     "audioFile": "1b51160dc4da.mp3"
   },
-  "栽": {
-    "ttsText": "“栽”：“栽种”的“栽”",
-    "audioFile": "c531fc4dd196.mp3"
-  },
-  "守": {
-    "ttsText": "“守”：“看守”的“守”",
-    "audioFile": "1ba348cb28ac.mp3"
-  },
-  "伐": {
-    "ttsText": "“伐”：“伐木”的“伐”",
-    "audioFile": "0c18951acbbb.mp3"
-  },
   "拾": {
     "ttsText": "“拾”：“拾起来”的“拾”",
     "audioFile": "88c7736cf69b.mp3"
-  },
-  "虱": {
-    "ttsText": "“虱”：“虱子”的“虱”",
-    "audioFile": "372128d7e214.mp3"
-  },
-  "抹": {
-    "ttsText": "“抹”：“抹布”的“抹”",
-    "audioFile": "580846bd32f4.mp3"
   },
   "隧": {
     "ttsText": "“隧”：“隧道”的“隧”",
     "audioFile": "d3f127903e33.mp3"
   },
-  "拱": {
-    "ttsText": "“拱”：“石拱桥”的“拱”",
-    "audioFile": "e51439d89aa0.mp3"
-  },
   "筏": {
     "ttsText": "“筏”：“竹筏”的“筏”",
     "audioFile": "6346f9175eae.mp3"
   },
-  "斜": {
-    "ttsText": "“斜”：“斜坡”的“斜”",
-    "audioFile": "46e116a79b36.mp3"
-  },
   "井": {
     "ttsText": "“井”：“水井”的“井”",
     "audioFile": "bc1ab095df57.mp3"
-  },
-  "型": {
-    "ttsText": "“型”：“模型”的“型”",
-    "audioFile": "4af687af575f.mp3"
-  },
-  "谜": {
-    "ttsText": "“谜”：“谜语”的“谜”",
-    "audioFile": "84b749b02833.mp3"
-  },
-  "绩": {
-    "ttsText": "“绩”：“成绩”的“绩”",
-    "audioFile": "bff854618807.mp3"
-  },
-  "舞": {
-    "ttsText": "“舞”：“跳舞”的“舞”",
-    "audioFile": "db9ea3adefdc.mp3"
   },
   "柜": {
     "ttsText": "“柜”：“柜子”的“柜”",

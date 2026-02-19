@@ -88,8 +88,8 @@
     "audioFile": "b3628347083d.mp3"
   },
   "越": {
-    "ttsText": "“月”：“月亮”的“月”",
-    "audioFile": "4fda0ff88b25.mp3"
+    "ttsText": "“越”：“越过”的“越”",
+    "audioFile": "97eed1fa33b4.mp3"
   },
   "洗": {
     "ttsText": "“洗”：“洗手”的“洗”",
@@ -808,8 +808,8 @@
     "audioFile": "56f7713cae3e.mp3"
   },
   "米": {
-    "ttsText": "“水”：“大米”的“水”",
-    "audioFile": "68840e9e4fde.mp3"
+    "ttsText": "“米”：“大米”的“米”",
+    "audioFile": "96172ba80305.mp3"
   },
   "仓": {
     "ttsText": "“仓”：“仓库”的“仓”",
@@ -856,16 +856,16 @@
     "audioFile": "e6f7154237a7.mp3"
   },
   "之": {
-    "ttsText": "“前”：“之前”的“前”",
-    "audioFile": "a2c211f9729c.mp3"
+    "ttsText": "“之”：“之前”的“之”",
+    "audioFile": "e9f3b4ef097b.mp3"
   },
   "尽": {
     "ttsText": "“尽”：“尽头”的“尽”",
     "audioFile": "39f8d277480b.mp3"
   },
   "竭": {
-    "ttsText": "“力”：“竭力”的“力”",
-    "audioFile": "676a98ace9fd.mp3"
+    "ttsText": "“竭”：“竭力”的“竭”",
+    "audioFile": "acd84219d2d0.mp3"
   },
   "自": {
     "ttsText": "“自”：“自己”的“自”",
@@ -1008,8 +1008,8 @@
     "audioFile": "2d6ac61f197b.mp3"
   },
   "平": {
-    "ttsText": "“苹”：“苹果”的“苹”",
-    "audioFile": "4467ee37ade1.mp3"
+    "ttsText": "“平”：“平安”的“平”",
+    "audioFile": "1306cc39b44c.mp3"
   },
   "洋": {
     "ttsText": "“洋”：“海洋”的“洋”",
@@ -1148,8 +1148,8 @@
     "audioFile": "e3d81c4eb774.mp3"
   },
   "陈": {
-    "ttsText": "“晨”：“早晨”的“晨”",
-    "audioFile": "2f2acfbc93e2.mp3"
+    "ttsText": "“陈”：“陈列”的“陈”",
+    "audioFile": "9351e51b0e1b.mp3"
   },
   "夜": {
     "ttsText": "“夜”：“夜晚”的“夜”",
@@ -1164,8 +1164,8 @@
     "audioFile": "83d3c05b9bcd.mp3"
   },
   "盯": {
-    "ttsText": "“睛”：“眼睛”的“睛”",
-    "audioFile": "2c2362345cbf.mp3"
+    "ttsText": "“盯”：“盯着”的“盯”",
+    "audioFile": "98e9e3cc240e.mp3"
   },
   "着": {
     "ttsText": "“着”：“看着”的“着”",
@@ -1912,8 +1912,8 @@
     "audioFile": "0007d398d4c9.mp3"
   },
   "听": {
-    "ttsText": "“耳”：“耳朵”的“耳”",
-    "audioFile": "193fd4aa1ae6.mp3"
+    "ttsText": "“听”：“听话”的“听”",
+    "audioFile": "be25e4c62110.mp3"
   },
   "雷": {
     "ttsText": "“雷”：“打雷”的“雷”",
@@ -2344,8 +2344,8 @@
     "audioFile": "b689ba704a15.mp3"
   },
   "吗": {
-    "ttsText": "“嗎”：“好吗”的“嗎”",
-    "audioFile": "cc4c86bfa16f.mp3"
+    "ttsText": "“吗”：“好吗”的“吗”",
+    "audioFile": "a57933d5a828.mp3"
   },
   "题": {
     "ttsText": "“题”：“题目”的“题”",
@@ -2856,8 +2856,8 @@
     "audioFile": "6ef5bec4b1c8.mp3"
   },
   "夫": {
-    "ttsText": "“爸”：“爸爸”的“爸”",
-    "audioFile": "875490743f70.mp3"
+    "ttsText": "“夫”：“大夫”的“夫”",
+    "audioFile": "8bf977092a07.mp3"
   },
   "滑": {
     "ttsText": "“滑”：“滑梯”的“滑”",
@@ -4320,8 +4320,8 @@
     "audioFile": "9b6b60adf2c8.mp3"
   },
   "栓": {
-    "ttsText": "“拴”：“拴住”的“拴”",
-    "audioFile": "1b51160dc4da.mp3"
+    "ttsText": "“栓”：“栓子”的“栓”",
+    "audioFile": "dbf92217edbf.mp3"
   },
   "足": {
     "ttsText": "“足”：“足球”的“足”",
@@ -4444,12 +4444,12 @@
     "audioFile": "7d707638935f.mp3"
   },
   "丁": {
-    "ttsText": "“钉”：“钉子”的“钉”",
-    "audioFile": "e7bbece54c47.mp3"
+    "ttsText": "“丁”：“丁点”的“丁”",
+    "audioFile": "e0b6226f85f4.mp3"
   },
   "硬": {
-    "ttsText": "“石”：“石头”的“石”",
-    "audioFile": "e136368e1773.mp3"
+    "ttsText": "“硬”：“硬币”的“硬”",
+    "audioFile": "5fad45d0d23f.mp3"
   },
   "孵": {
     "ttsText": "“孵”：“孵蛋”的“孵”",
@@ -5432,12 +5432,12 @@
     "audioFile": "56fd505bcfa3.mp3"
   },
   "沒": {
-    "ttsText": "“没”：“没有”的“没”",
-    "audioFile": "b81f0ab28385.mp3"
+    "ttsText": "“沒”：“沒有”的“沒”",
+    "audioFile": "72a8c3a73ac5.mp3"
   },
   "來": {
-    "ttsText": "“来”：“过来”的“来”",
-    "audioFile": "450802023961.mp3"
+    "ttsText": "“來”：“過來”的“來”",
+    "audioFile": "077a791b1409.mp3"
   },
   "赖": {
     "ttsText": "“赖”：“赖床”的“赖”",
@@ -5452,8 +5452,8 @@
     "audioFile": "ed495c0003f6.mp3"
   },
   "題": {
-    "ttsText": "“题”：“题目”的“题”",
-    "audioFile": "b3d0f5e66ff8.mp3"
+    "ttsText": "“題”：“題目”的“題”",
+    "audioFile": "3b3d9556a526.mp3"
   },
   "振": {
     "ttsText": "“振”：“振作”的“振”",
@@ -5484,12 +5484,12 @@
     "audioFile": "cf2fe20bebb3.mp3"
   },
   "脫": {
-    "ttsText": "“脱”：“脱衣服”的“脱”",
-    "audioFile": "0b1302abba50.mp3"
+    "ttsText": "“脫”：“脫衣服”的“脫”",
+    "audioFile": "b1fa825e17ce.mp3"
   },
   "撐": {
-    "ttsText": "“撑”：“雨伞”的“撑”",
-    "audioFile": "de8b3ecf179d.mp3"
+    "ttsText": "“撐”：“撐伞”的“撐”",
+    "audioFile": "c4778838b18f.mp3"
   },
   "巾": {
     "ttsText": "“巾”：“毛巾”的“巾”",

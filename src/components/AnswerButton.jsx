@@ -31,7 +31,7 @@ export default function AnswerButton({ answer, pronunciation, onClick, isSelecte
         rounded-[1.5rem] md:rounded-[2rem] p-4 md:p-6
         transition-all duration-300
         border-b-4 md:border-b-8 active:border-b-0
-        flex flex-col items-center justify-center gap-3 w-full min-h-[140px] md:min-h-[200px]
+        flex flex-col items-center justify-center gap-2 w-full min-h-[80px] md:min-h-[120px]
         ${isSelected
                     ? 'bg-gradient-to-br from-indigo-500 to-purple-600 border-indigo-700 shadow-2xl shadow-indigo-300/60 scale-[1.03]'
                     : 'glass-card border-blue-100 hover:border-indigo-200'}

@@ -1,12 +1,12 @@
 import { useState, useMemo } from 'react';
 import confetti from 'canvas-confetti';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Star, RotateCcw, Award, Sparkles, Volume2, Send } from 'lucide-react';
+import { Star, RotateCcw, Award, Sparkles, Send } from 'lucide-react';
 import QuestionCard from './components/QuestionCard';
 import AnswerButton from './components/AnswerButton';
 import ProgressBar from './components/ProgressBar';
 import { questions, feedbackPhrases } from './data/questions';
-import { speak } from './utils/tts';
+import { speakFeedback } from './utils/tts';
 
 const GAME_SIZE = 5;
 
@@ -23,11 +23,12 @@ function shuffleArray(arr) {
 const mascotImg = `${import.meta.env.BASE_URL}mascot.png`;
 
 function App() {
+  const [gameState, setGameState] = useState('welcome'); // welcome | playing | result
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
-  const [showResult, setShowResult] = useState(false);
   const [isAnswered, setIsAnswered] = useState(false);
   const [feedback, setFeedback] = useState(null);
+  const [feedbackText, setFeedbackText] = useState('');
   const [selectedOption, setSelectedOption] = useState(null);
   const [gameKey, setGameKey] = useState(0); // triggers re-shuffle
 
@@ -56,16 +57,20 @@ function App() {
     if (selectedOption.isCorrect) {
       setScore(score + 1);
       setFeedback('correct');
+      const phrase = getRandomPhrase('correct');
+      setFeedbackText(phrase);
       confetti({
         particleCount: 150,
         spread: 100,
         origin: { y: 0.6 },
         colors: ['#818cf8', '#c084fc', '#fb7185', '#fbbf24']
       });
-      speak(getRandomPhrase('correct'), 'en-US');
+      speakFeedback(phrase);
     } else {
       setFeedback('incorrect');
-      speak(getRandomPhrase('incorrect'), 'en-US');
+      const phrase = getRandomPhrase('incorrect');
+      setFeedbackText(phrase);
+      speakFeedback(phrase);
     }
 
     setTimeout(() => {
@@ -73,26 +78,24 @@ function App() {
         setCurrentQuestionIndex(currentQuestionIndex + 1);
         setIsAnswered(false);
         setFeedback(null);
+        setFeedbackText('');
         setSelectedOption(null);
       } else {
-        setShowResult(true);
-        speak(getRandomPhrase('complete'), 'en-US');
+        setGameState('result');
+        speakFeedback(getRandomPhrase('complete'));
       }
     }, 2500);
   };
 
-  const repeatQuestion = () => {
-    speak(currentQuestion.text, 'zh-CN');
-  };
-
-  const restartGame = () => {
+  const startGame = () => {
     setCurrentQuestionIndex(0);
     setScore(0);
-    setShowResult(false);
     setIsAnswered(false);
     setFeedback(null);
+    setFeedbackText('');
     setSelectedOption(null);
-    setGameKey(k => k + 1); // re-shuffle questions
+    setGameKey(k => k + 1);
+    setGameState('playing');
   };
 
   // Graded result feedback based on score ratio
@@ -105,7 +108,83 @@ function App() {
     return { title: '💪 继续努力！', msg: `答对了 ${score} 道题，多练习就会越来越棒！`, color: 'from-pink-500 to-rose-500' };
   };
 
-  if (showResult) {
+  // ── Welcome Screen ─────────────────────────────────────────────
+  if (gameState === 'welcome') {
+    return (
+      <div className="min-h-screen flex items-center justify-center p-4 bg-[#f8fafc] relative overflow-hidden">
+        {/* Background Orbs */}
+        <div className="absolute -top-20 -left-20 w-80 h-80 bg-indigo-100 rounded-full blur-[100px] opacity-60 pointer-events-none" />
+        <div className="absolute -bottom-20 -right-20 w-80 h-80 bg-yellow-100 rounded-full blur-[100px] opacity-60 pointer-events-none" />
+        <div className="absolute top-1/3 right-1/4 w-40 h-40 bg-pink-100 rounded-full blur-[80px] opacity-40 pointer-events-none" />
+
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ type: 'spring', damping: 15, stiffness: 100 }}
+          className="glass-card rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-16 text-center max-w-lg w-full relative overflow-hidden"
+        >
+          {/* Top gradient bar */}
+          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
+
+          {/* Mascot */}
+          <motion.div
+            animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
+            transition={{ duration: 3, repeat: Infinity, ease: 'easeInOut' }}
+            className="w-36 h-36 md:w-48 md:h-48 mx-auto mb-6 md:mb-8"
+          >
+            <img src={mascotImg} alt="小鸡" className="w-full h-full object-contain drop-shadow-xl" />
+          </motion.div>
+
+          {/* Title */}
+          <motion.h1
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.2 }}
+            className="text-4xl md:text-5xl font-black text-gray-800 mb-2 tracking-tight"
+          >
+            智慧对对碰
+          </motion.h1>
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.3 }}
+            className="text-indigo-400 font-bold text-xs md:text-sm tracking-widest uppercase mb-6 md:mb-8"
+          >
+            Brain Teaser Adventure
+          </motion.p>
+
+          {/* Description */}
+          <motion.p
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.4 }}
+            className="text-gray-500 text-base md:text-lg mb-8 md:mb-10 leading-relaxed"
+          >
+            点一点文字听发音，动动脑回答问题！
+            <br />
+            每局 {GAME_SIZE} 道题，看看你能答对几道？
+          </motion.p>
+
+          {/* Start Button */}
+          <motion.button
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ delay: 0.5 }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={startGame}
+            className="w-full bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-2xl md:text-3xl font-black py-5 md:py-6 px-8 rounded-[1.5rem] md:rounded-[2rem] shadow-xl hover:shadow-2xl hover:shadow-indigo-300/40 transition-shadow flex items-center justify-center gap-3"
+          >
+            <Sparkles className="w-7 h-7 md:w-8 md:h-8" />
+            开始挑战！
+          </motion.button>
+        </motion.div>
+      </div>
+    );
+  }
+
+  // ── Result Screen ───────────────────────────────────────────────
+  if (gameState === 'result') {
     const result = getResultFeedback();
     return (
       <div className="min-h-screen flex items-center justify-center p-4 bg-[#f8fafc]">
@@ -145,7 +224,7 @@ function App() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={restartGame}
+            onClick={startGame}
             className={`w-full bg-gradient-to-r ${result.color} text-white text-xl md:text-2xl font-bold py-5 md:py-6 px-8 rounded-[1.5rem] md:rounded-[2rem] shadow-xl flex items-center justify-center gap-3`}
           >
             <RotateCcw className="w-6 h-6 md:w-8 md:h-8" />
@@ -164,28 +243,16 @@ function App() {
 
       <header className="relative z-10 flex justify-between items-center max-w-5xl mx-auto mb-8 md:mb-12">
         <div className="flex items-center gap-4 md:gap-6 group">
-          <div className="relative">
-            <motion.div
-              animate={{
-                y: [0, -5, 0],
-                rotate: [0, 3, -3, 0]
-              }}
-              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-              className="w-16 h-16 md:w-24 md:h-24 glass rounded-2xl md:rounded-3xl flex items-center justify-center overflow-hidden border-2 border-white/80 shadow-xl"
-            >
-              <img src={mascotImg} alt="Mascot" className="w-12 h-12 md:w-20 md:h-20 object-contain" />
-            </motion.div>
-
-            {/* Repeat Question Button */}
-            <motion.button
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              onClick={repeatQuestion}
-              className="absolute -bottom-2 -right-2 bg-indigo-500 text-white p-2 rounded-full shadow-lg border-2 border-white"
-            >
-              <Volume2 className="w-4 h-4 md:w-6 md:h-6" />
-            </motion.button>
-          </div>
+          <motion.div
+            animate={{
+              y: [0, -5, 0],
+              rotate: [0, 3, -3, 0]
+            }}
+            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            className="w-16 h-16 md:w-24 md:h-24 glass rounded-2xl md:rounded-3xl flex items-center justify-center overflow-hidden border-2 border-white/80 shadow-xl"
+          >
+            <img src={mascotImg} alt="Mascot" className="w-12 h-12 md:w-20 md:h-20 object-contain" />
+          </motion.div>
           <div>
             <h1 className="text-2xl md:text-4xl font-black text-gray-800 tracking-tighter">智慧对对碰</h1>
             <p className="text-indigo-400 font-bold text-[10px] md:text-sm tracking-widest uppercase">Brain Teaser Adventure</p>
@@ -268,9 +335,9 @@ function App() {
               `}
             >
               {feedback === 'correct' ? (
-                <>Good Job! <Sparkles className="w-6 h-6 md:w-8 md:h-8" /></>
+                <>{feedbackText} <Sparkles className="w-6 h-6 md:w-8 md:h-8" /></>
               ) : (
-                'Try Again! 🐣'
+                <>{feedbackText} 🐣</>
               )}
             </motion.div>
           )}

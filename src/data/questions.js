@@ -4,21 +4,21 @@ export const questions = questionsData;
 
 export const feedbackPhrases = {
   correct: [
-    "Awesome!", "Great job!", "You're so smart!", "Perfect!", "Brilliant!",
-    "You got it!", "Fantastic!", "Amazing!", "Well done!", "Keep it up!",
-    "Correct!", "Spot on!", "Superb!", "Excellent!", "Wonderful!",
-    "You're a genius!", "Impressive!", "Way to go!", "That's right!", "Beautifully done!"
+    "太棒了！", "真聪明！", "答对了！", "好厉害！", "真厉害！",
+    "你真棒！", "非常好！", "太厉害了！", "完美！", "了不起！",
+    "正确！", "真不错！", "太好了！", "厉害！", "很棒！",
+    "你好聪明！", "太赞了！", "做得好！", "就是这样！", "非常棒！"
   ],
   incorrect: [
-    "Try again!", "Not quite!", "You can do it!", "Keep thinking!", "Don't give up!",
-    "Almost there!", "Oops!", "Think harder!", "Maybe next time!", "So close!",
-    "Retry!", "Go again!", "One more try!", "Be positive!", "You're learning!",
-    "No worries!", "Stay focused!", "You can!", "Almost!", "Keep trying!"
+    "再试试！", "不太对哦！", "加油！", "再想想！", "别放弃！",
+    "快答对了！", "没关系！", "动动脑！", "下次一定行！", "差一点！",
+    "再来一次！", "换一个！", "再试一次！", "别灰心！", "你能行的！",
+    "没关系哦！", "再想一想！", "你可以的！", "快了快了！", "继续加油！"
   ],
   complete: [
-    "Mission accomplished!", "You finished!", "You're a master!", "Incredible!", "Victory!",
-    "Adventurer!", "Riddle master!", "Expert!", "Champion!", "Stellar!",
-    "Superstar!", "Bravo!", "Outstanding!", "Goal reached!", "Hero!",
-    "Genius!", "Finished!", "Complete!", "Winner!", "Great performance!"
+    "挑战完成！", "你太厉害了！", "真是小天才！", "好棒好棒！", "胜利！",
+    "冒险家！", "小博士！", "达人！", "冠军！", "闪亮之星！",
+    "超级厉害！", "太棒棒了！", "好厉害呀！", "目标达成！", "小英雄！",
+    "天才！", "完成了！", "通关啦！", "赢家！", "表现超棒！"
   ]
 };
